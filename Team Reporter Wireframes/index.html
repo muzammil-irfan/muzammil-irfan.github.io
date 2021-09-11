@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Reporter App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="mainInterfaceForms" id="login-main">
+
+        <fieldset>
+            <legend>Login</legend>
+            <form action="" id="form-2">
+                <div class="formInterfaceDiv">
+                    <label for="login_email">Email</label><br> <input type="email" id="login_email" required>
+                    <br>
+                    <label for="login_password">Password </label><br><input type="password" id="login_password"
+                        required>
+                    <br>
+                    <div id="loginPageButtons"><button class="f1-btn" id="login_btn">Login</button>
+                        <button class="f1-btn" id="register_btn">Register</button>
+                    </div>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+
+    <!-- Created a signup page -->
+
+    <div class="mainInterfaceForms" id="signup-main">
+        <fieldset>
+            <legend>SignUp</legend>
+            <form action="#" id="form-1">
+                <div class="formInterfaceDiv">
+                    <label for="fullName">Full Name</label><br> <input type="text" id="signup_fullName"><br>
+                    <label for="email">Email</label><br> <input type="email" id="signup_email"><br>
+                    <div id="invalid">email already exist</div>
+                    <label for="password">Password </label><br><input type="password" id="signup_password">
+                    <br><button class="f1-btn" id="signupButton">Signup</button>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+
+    <!-- teams Dashboard -->
+
+    <div class="mainInterfaceForms " id="teamsDashboard">
+        <fieldset>
+            <legend>Teams</legend>
+            <div class="mainTeamInteface">
+                <div id="mainTeamIntefaceAll">
+
+                    <div id="teamsTypes">
+
+                        <div class="teamsInterfaceparts">
+                            <p class="h1">Teams you own</p>
+                            <div class="teamsIown">
+                                <!-- <div class="teamsIownPart">
+
+                                    <div class="teams">
+                                        <span>Developers</span>
+                                        <p><b>Members: </b> Haris</p>
+                                    </div>
+                                    <div class="teams">
+                                        <span>Developers</span>
+                                        <p><b>Members: </b> Haris</p>
+                                    </div> 
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="teamsInterfaceparts">
+                            <p class="h1">Teams you're part of</p>
+                            <div class="teamsInWhichIam">
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="plusBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" fill="black"
+                            class="bi bi-plus-circle" id="teamCreateButton" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path
+                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                        </svg>
+                    </div>
+                </div>
+
+
+        </fieldset>
+    </div>
+
+    <!-- creating a popup div -->
+
+    <div class="popupMainCreate" id="popupWindow">
+        <div class="popupcreate">
+            <form action="" id="teamCreationForm">
+                <input type="text" placeholder="Team Name" id="teamNameCreate">
+                <select name="category" id="categoryCreate">
+
+                    <option name="category" value="Developers">Developers</option>
+                    <option name="category" value="Maintenance Team">Maintenance Team</option>
+                    <option name="category" value="Leads">Leads</option>
+                    <option name="category" value="Architects">Architects</option>
+                </select>
+                <input type="email" placeholder="Members (type email)" id="membersEmailCreate">
+                <div class="popupCreateButtonContainer">
+                    <button class="popupCreateButton" id="popupCreate">Create</button>
+                    <button class="popupCreateButton" id="popupCancel">Cancel</button>
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- made team owner view of return tab-->
+
+    <div class="mainInterfaceForms" id="ownerViewReturn">
+        <fieldset>
+            <legend>Team/Owner view</legend>
+            <div class="ownerReportsSettings">
+
+                <div id="tabs">
+                    <button class="reportsTab">
+                        Reports
+                    </button>
+                    <button class="settingsTab">
+                        Settings
+                    </button>
+                </div>
+                <div id="memberListContainer">
+                    <select name="membersList" id="membersList">
+                        <option value="All Members">All Members</option>
+                        <option value=""></option>
+                    </select>
+                    <input type="date" id="dateInput">
+                </div>
+                <div>
+                    <div class="membersDetails">Haris: 16th August</div>
+                    <div class="questionAnswers">
+                        <p id="question1">Q.What did you do today</p>
+                        <p id="answer1">A</p>
+                        <p id="question2">Q.What did you do today</p>
+                        <p id="answer2">A</p>
+                        <p id="question3">Q.What did you do today</p>
+                        <p id="answer3">A</p>
+                    </div>
+                    <div class="membersDetails">Haris: 16th August</div>
+                    <div class="questionAnswers">
+                        <p id="question1">Q.What did you do today</p>
+                        <p id="answer1">A</p>
+                        <p id="question2">Q.What did you do today</p>
+                        <p id="answer2">A</p>
+                        <p id="question3">Q.What did you do today</p>
+                        <p id="answer3">A</p>
+                    </div>
+                </div>
+
+            </div>
+        </fieldset>
+    </div>
+
+    <!-- made team owner view of settings tab -->
+
+    <div class="mainInterfaceForms" id="ownerViewSetting">
+        <fieldset>
+            <legend>Team/Owner view</legend>
+            <div class="ownerReportsSettings">
+
+                <div id="tabs">
+                    <button class="reportsTab">
+                        Reports
+                    </button>
+                    <button class="settingsTab">
+                        Settings
+                    </button>
+                </div>
+            </div>
+
+            <div class="align1ofSettings">
+                <p>Questions:</p>
+            </div>
+            <div id="definingQuestions" class="align2ofSettings">
+                <input type="text">
+                <input type="text">
+                <input type="text">
+            </div>
+            <div class="align1ofSettings">
+                <p>Reminder Time:</p>
+            </div>
+            <div class="align2ofSettings" id="checkboxofSettingsContainer">
+                <input type="time" id="definingTime">
+
+                <label for="checkboxofSettings"><input size="100px" type="checkbox" id="checkboxofSettings">Exclusive
+                    Weekends</label>
+                </span>
+            </div>
+            <div class="align1ofSettings">
+                <p>Members</p>
+            </div>
+            <div class="align2ofSettings">
+                <div id="addMemberEmails">
+                   
+                </div>
+                <div id="addMemberDiv">
+                    <input type="email" placeholder="Add Member" id="addMemberValue">
+                    <button id="addMemberButton">Add</button>
+                </div>
+                <div id="buttonsofSettingstab">
+                    <button id="saveChangesButton">Save Changes</button>
+                    <button id="CancelButtonOfSettings">Cancel</button>
+                    <button id="deleteTeamofSettings">Delete Team</button>
+                </div>
+            </div>
+
+
+        </fieldset>
+    </div>
+
+    <!-- maked a member view -->
+
+    <div id="memberview" class="mainInterfaceForms">
+        <fieldset>
+            <legend>Team/ Member view</legend>
+            <div id="memberViewContainer">
+
+                <div id="firstParaOfMemberView" class="align1ofSettings">
+                    <p>Filling for: <span id="todaysDate">16th August 2021</span></p>
+                </div>
+                <div class="align2ofSettings" id="answersValueFromMembers">
+                    <p id="question1Show">Q.What did you do today</p>
+                    <input type="text" id="answer1Value" placeholder="Answer">
+                    <p id="question2Show">Q.What did you do today</p>
+                    <input type="text" id="answer2Value" placeholder="Answer">
+                    <p id="question3Show">Q.What did you do today</p>
+                    <input type="text" id="answer3Value" placeholder="Answer">
+                </div>
+                <button id="memberViewSubmit " class="align2ofSettings">Submit</button>
+            </div>
+        </fieldset>
+    </div>
+
+    <script type="" src="./login.js"></script>
+    <script type="" src="./Signup.js"></script>
+    <script type="" src="./teamdashboard.js"></script>
+    <script type="" src="event.js"></script>
+    <script type="" src="setting.js"></script>
+    <!---->
+</body>
+
+
+</html>

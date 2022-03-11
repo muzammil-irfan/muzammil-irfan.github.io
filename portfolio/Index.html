@@ -1,0 +1,164 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <i id="btnScrollTop" class='fas btnScroll'>&#xf062;</i>
+    <script>
+        const btnScroll = document.getElementByIs("btnScrollTop");
+        btnScroll.addEventListener("click" , function(){
+            //window.scroll(0,0);
+            windows.scrollTo({
+                top:0,
+                left:0,
+                behavior:"smooth"
+            })
+           
+            });
+       
+    </script>
+    <div class="social-links">
+        <a href="#">facebook</a>
+        <a href="#"> LinkedIn</a>
+
+        <a href="#"> Instagram</a>
+    </div>
+    <div class="Main">
+        <div class="navbar">
+            <a class="logo" href="">Portfo<span>lio</span></a>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">skills</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <span class="menubtn" style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776;</span>
+
+
+        <div class="intro">
+            <h1><span class="hello">Hello,</span>my name is <span id="name"></span></h1>
+            <p>
+            <h2>and I am a WebDeveloper.</h2>
+            </p>
+            <button class="btn">2020 Collection</button>
+
+        </div>
+
+
+        <script type="text/javascript">
+            var i = 0;
+
+        </script>
+
+    </div>
+
+
+
+    <div class="skills">
+
+        <table>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Html</li>
+                        <li>CSS</li>
+                        <li>javascript</li>
+                        <li>bootstrap</li>
+                        <li>java</li>
+                        <li>SQL</li>
+                        <li>jQuery</li>
+                    </ul>
+                </td>
+
+                <td>
+                    <ul>
+                        <li><img src
+                                class="star" "C:\Users\lenovo\OneDrive\Desktop\My final portfolio website\Images\Star image.png">
+                        </li>
+
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+    <div class="Services">
+        <h2 class="title">My Services</h2>
+        <div class="serv-content">
+            <div class="card">
+                <div class="box">
+                    <i class="fas fa-paint-brush"></i>
+                    <div class="text">Web Design</div>
+                    <p>Hello, I am Saba Sadaqat, full stake web designer and developer. <br>I am a content writer as well.
+                        Being a self employed, <br>I want to help out clients to fulfill their demands.</p>
+                </div>
+            </div>
+     
+        <div class="card">
+            <div class="box">
+                <i class="fas fa-chart-line"></i>
+                <div clas="text">Advertising</div>
+                <p>Advertisenment is best when you make it easy to sell and grab people's attention to sell your best project.</p>
+
+            </div>
+
+        </div>
+        <div class="cards">
+            <div class="box">
+                <i class="fas fa-chart-line"></i>
+                <div class="text">App Design</div>
+                <p>Hello how are you? I am fine thank you. amd get lost.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="Contact">
+            <form action="mailto:sabasadaqat333@gmail.com" method="post">
+                <div class="wrapper">
+                    <div class="inner-data">
+                        <input type="text" required>
+                        <lable for="Contact">Name#</lable>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="inner-data">
+                        <input type="text" required>
+                        <lable for="Contact">Contact#</lable>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="inner-data">
+                        <input type="email" required>
+                        <lable for="Email">Email#</lable>
+                    </div>
+                </div>
+                <input class="submit" type="submit">
+            </form>
+        </div>
+    </div>
+    
+
+
+    <script type="text/javascript">
+        var i = 0;
+
+        var txt = " Saba Sadaqat";
+        var speed = 250;
+        function type() {
+            document.getElementById('name').innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+        type();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,308 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.Main{
+    background-image: url("images/Pic1.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    margin: 100px;
+    padding: 50px;
+    box-shadow: 15px 20px 15px #C9CCD5;
+
+}
+.btnScroll{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rbg(11, 108, 253);
+    color: #fff;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.25);
+    outline: none;
+    cursor: pointer;
+}
+
+
+.navbar{
+    display: flex;
+    
+    width: 100%;
+    justify-content: space-between;
+}
+@media only screen and (max-width:700px){
+    menubtn{
+        display: block;
+    }
+}
+.sidenav{
+    display: none;
+    height: 80vh;
+    width: 290px;
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    right: 100px;
+    background-color: orange;
+    overflow-x: hidden;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.sidenav a{
+    padding-top: 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color:#fff;
+    display: block;
+
+}
+.sidenav a:hover{
+    color: #f1f1f1;
+
+}
+.logo{
+    text-decoration: none;
+    color: #fff;
+    font-size: 3rem;
+    margin-top: -15px;
+}
+
+span{
+    color: yellow;
+}
+.intro{
+    margin-top:100px;
+}
+.social-links{
+    transform: rotate(-90deg);
+    position: fixed;
+    top: 300px;
+    left: -85px;
+}
+.social-links a{
+    margin-right: 18px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.btn{
+    display: inline-block;
+    background:linear-gradient(to right, rgba(47, 235, 179, 0.753),yellow);
+    border-radius: 6px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    color: white;
+    font-weight: bolder;
+    border-style: none;
+    margin-top: 10px;
+    animation: button 4s;
+    position: relative;
+    animation-iteration-count: infinite;
+}
+@keyframes button
+
+{
+    0% {transform: rotate(0deg);left:0px;}
+    25% {transform: rotate(20deg);left:0px;}
+    50% {transform: rotate(0deg);left:400px;}
+    55% {transform: rotate(0deg);left:400px;}
+    70% {transform: rotate(0deg);left:400px;}
+    100% {transform: rotate(-360deg);left:0px;}
+
+}
+
+#name{
+    border-right: 4px solid white;
+    animation:blink 1s infinite;
+    padding-right: 1px;
+}
+@keyframes blink{
+    50%{
+        border-right:none;
+    }
+}
+.menubtn{
+    display: none;
+    color: #fff;
+}
+.closebtn{
+    display:none;
+    color: #fff;
+}
+
+.skills{
+    background-image: linear-gradient(to bottom right, rbg(203, 83, 240), rbg(226, 121, 35) yellow);
+    background:linear-gradient(to right, rgba(47, 235, 179, 0.753),yellow);
+    height: 80vh;
+    margin: 100px;
+    padding: 100px;
+    box-shadow: 15px 20px 15px #C9CCD5;
+
+}
+.star{
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    animation: logo 5s;
+    animation-iteration-count: infinite;
+}
+
+.skills ul{
+    list-style-type: none;
+    margin-right: 50px;
+}
+
+.skills ul li{
+    line-height: 2.5rem;
+    font-size: 1.5rem
+}
+
+@keyframes logo{
+    100%{transform: rotate(360deg);}
+}
+.submit{
+    margin-top: 20px;
+    background-color: rbg(146, 10, 146);
+    color: #FFf;
+    padding: 20px;
+    border-radius: 40px;
+    border-style: none;
+}
+
+.Services{
+    background-image: linear-gradient(to right, rgba(47, 235, 179, 0.753),yellow);
+    height: 80vh;
+    margin: 100px;
+    padding: 100px;
+    box-shadow: 15px 20px 15px #C9CCD5;
+}
+
+.serv-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services .serv-content .card{
+    width: calc(33%-20px);
+    text-align: center;
+    background-color: rbg(13, 137, 219);
+    padding: 30px;
+    margin: 20px;
+    box-shadow: 10px 5px 10px rbg(2,70, 180);
+}
+
+.services .serv-content .card i {
+    font-size: 40px;
+    color: #fff;
+
+}
+
+.service .serv-content .card .text{
+    font-size: 1.5rem;
+    margin: 10px;
+    color: #fff;
+
+}
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box{
+    transform: scale(1.10);
+}
+.services .serv-content .card:hover .box{
+    background: blue;
+}
+.services .serv-content .card:hover .box{
+    transition: all 0.3s ease;
+}
+.title{
+    text-align: center;
+    color: #fff;
+    position: relative;
+    font-size: 2rem;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+.title::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background-color: #fff;
+    transform: translateX(-50%);
+}
+.title::after{
+    content: "what I provide";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 5px;
+    transform: translateX(-50%);
+    background-color: rbg(0, 140, 255);
+}
+#contact{
+    background-image: linear-gradient(to bottom left, );
+    height: 80vh;
+    margin: 100px;
+    padding: 100px;
+    box-sizing: border-box;
+    position: relative;
+    right: 40px;
+    top: 50px;
+    box-shadow: 10px 5px 10px;
+  
+}
+.Contact{
+    padding: 50px;
+    padding: 50px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    box-shadow: 10px 5px 10px;
+
+}
+.wrapper{
+    width: 300px;
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 10px;
+}
+.wrapper .input-data{
+    height: 20px;
+    width: 100px;
+    position: relative;
+}
+.wrapper .input-data input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid Silver;
+}
+.input-data input:focus ~ label,
+.input-data input:valid ~ label{
+    transform: translateY(-20px);
+}
+.input-data input:focus{
+    outline: none;
+}
+.wrapper .input-data lable{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    color: grey;
+   
+}

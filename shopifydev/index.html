@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=regular");
+      html,
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: "#477501",
+              grey: "#707070",
+            },
+          },
+          fontFamily: {
+            body: "Montserrat, sans-serif",
+            display: "Montserrat, sans-serif",
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header class="w-full flex py-4 shadow-md sticky top-0 bg-white z-2">
+      <div
+        class="flex justify-between container mx-auto md:max-w-[90%] lg:max-w-[80%]"
+      >
+        <div>
+          <a href="#">
+            <img src="./shopify/logo.png" class="max-w-[150px]" />
+          </a>
+        </div>
+        <div class="flex gap-10 text-lg items-center">
+          <div class="text-brand gap-5 flex">
+            <a href="#" class="border-b-2 border-brand p-1"> Shopify </a>
+            <a href="#" class="p-1"> Magento </a>
+            <a href="#" class="p-1"> Wordpress </a>
+            <a href="#" class="p-1"> Webflow </a>
+          </div>
+          <button class="text-white bg-brand px-3 rounded-md py-1">
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="bg-[url('/shopify/banner-full.png')] h-[600px] bg-cover bg-no-repeat">
+        <div class="text-white  h-full container mx-auto">
+            <div class="w-1/2 h-full flex justify-center gap-1 flex-col">
+                <h2 class="text-4xl leading-10">
+                    We Transform Everyday Brands Into Industry Leaders With Shopify.
+                </h2>
+                <p class="text-lg my-2">
+                    Turn your eCommerce business into a reality with our expert Shopify developers. Our custom eCommerce solutions will help you achieve your goal faster in the business world.
+                </p>
+                <button
+            class="bg-white text-brand rounded-3xl w-[340px] pl-5 text-start py-4"
+          >
+            Get A Free Consultation 
+          </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Shopify services section -->
+    <section class="container mx-auto py-5">
+      <h2 class="text-brand text-center my-4 lg:text-[50px]">
+        Shopify services we offer
+      </h2>
+      <div class="grid grid-cols-3 gap-3">
+        <div class="border rounded-md p-8">
+          <img src="./shopify/shopify-plus-integration.png" />
+          <h3 class="text-brand text-2xl my-3">
+            Shopify Plus <b>integration</b>
+          </h3>
+          <p class="text-grey">
+            Simplify your business operations with flexible Shopify API
+            integrations
+          </p>
+        </div>
+        <div class="border rounded-md p-8">
+          <img src="./shopify/shopify-plus-migration.png" />
+          <h3 class="text-brand text-2xl my-3">
+            Shopify Plus <b>migration</b>
+          </h3>
+          <p class="text-grey">
+            Re-platform to Shopify Plus to scale fast without limits
+          </p>
+        </div>
+        <div class="border rounded-md p-8">
+          <img src="./shopify/shopify-plus-design.png" />
+          <h3 class="text-brand text-2xl my-3">
+            Shopify Plus store<b>design</b>
+          </h3>
+          <p class="text-grey">
+            Design an intuitive Shopify website to reflect your unique business
+          </p>
+        </div>
+        <div class="border rounded-md p-8">
+          <img src="./shopify/free-consultation.png" />
+          <h3 class="text-brand text-2xl my-3">Get a free consultation</h3>
+          <p class="text-grey">
+            Separate your back-end infrastructure from your front-end customer
+            touchpoints
+          </p>
+        </div>
+        <div class="border rounded-md p-8">
+          <img src="./shopify/shopify-plus-support.png" />
+          <h3 class="text-brand text-2xl my-3">Shopify Plus <b>support</b></h3>
+          <p class="text-grey">
+            Ensure the growth of your store and prevent downtime and revenue
+            losses
+          </p>
+        </div>
+        <div class="border rounded-md p-8">
+          <img src="./shopify/shopify-plus-app.png" />
+          <h3 class="text-brand text-2xl my-3">
+            Shopify Plus <b>app development</b>
+          </h3>
+          <p class="text-grey">
+            Bring your store at your customers&apos; fingertips with a Shopify
+            mobile or web app
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shopify consultant service -->
+    <section class="relative py-10">
+      <!-- Green part -->
+      <div class="bg-brand text-white">
+        <div class="container mx-auto md:max-w-[90%] lg:max-w-[80%] py-20">
+          <div class="w-1/2 max-w-[700px]">
+            <h2 class="text-5xl">
+              Best-In-Class <br />
+              Shopify consultant service
+            </h2>
+            <p class="text-2xl my-12">
+              With more than 3,000 five-star reviews and over 2,600 eCommerce
+              stores leveraging our custom development services, IT-Geeks prides
+              itself on being an industry-leading Shopify development company –
+              providing custom-tailored consulting services for shop owners
+              looking to elevate their Shopify UX, CX, and design to new
+              heights.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto md:max-w-[90%] lg:max-w-[80%] py-10">
+        <div class="w-1/2 max-w-[700px]">
+          <h2 class="text-5xl text-brand">
+            Driven By Results. Fueled By Innovation.
+          </h2>
+          <p class="text-2xl my-8">
+            As a highly-rated and qualified Shopify website development company,
+            we know how to take your eCommerce site to new heights – boosting
+            sales, generating more leads, and conquering the competitive
+            landscape.
+          </p>
+          <button
+            class="bg-brand text-white rounded-3xl w-[340px] text-center py-4"
+          >
+            Get A Free <b>Consultation </b>
+          </button>
+        </div>
+      </div>
+      <!-- This is for image -->
+      <div class="absolute top-0 w-full h-full">
+        <div
+          class="container mx-auto md:max-w-[90%] lg:max-w-[80%] flex justify-end items-center h-full"
+        >
+          <div class="w-1/2 text-end">
+            <img src="./shopify/best-in-class.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shopify Services -->
+    <section class="py-10">
+      <div class="container mx-auto md:max-w-[90%] lg:max-w-[80%]">
+        <p class="my-6 text-2xl">SHOPIFY SERVICES</p>
+        <h3 class="text-[44px] mb-4">
+          <b class="text-brand">We love working,</b>
+          on custom shopify apps, <br />
+          Below are some of features
+        </h3>
+        <div class="my-10 grid grid-cols-3 text-[22px] gap-10">
+          <div>
+            <b class="">01</b>
+            <span class="px-4">/</span>
+            <span>Shopping Cart</span>
+          </div>
+          <div>
+            <b class="">06</b>
+            <span class="px-4">/</span>
+            <span>Hosting</span>
+          </div>
+          <div>
+            <b class="">11</b>
+            <span class="px-4">/</span>
+            <span>Media</span>
+          </div>
+          <div>
+            <b class="">02</b>
+            <span class="px-4">/</span>
+            <span>Shipping Returns</span>
+          </div>
+          <div>
+            <b class="">07</b>
+            <span class="px-4">/</span>
+            <span>Server Management</span>
+          </div>
+          <div>
+            <b class="">12</b>
+            <span class="px-4">/</span>
+            <span>Social Media</span>
+          </div>
+          <div>
+            <b class="">03</b>
+            <span class="px-4">/</span>
+            <span>Multi Screen</span>
+          </div>
+          <div>
+            <b class="">08</b>
+            <span class="px-4">/</span>
+            <span>Analytics</span>
+          </div>
+          <div>
+            <b class="">13</b>
+            <span class="px-4">/</span>
+            <span>Alerts & Notifications</span>
+          </div>
+          <div>
+            <b class="">04</b>
+            <span class="px-4">/</span>
+            <span>Universal Login</span>
+          </div>
+          <div>
+            <b class="">09</b>
+            <span class="px-4">/</span>
+            <span>Content Management</span>
+          </div>
+          <div>
+            <b class="">14</b>
+            <span class="px-4">/</span>
+            <span>Location & Services</span>
+          </div>
+          <div>
+            <b class="">05</b>
+            <span class="px-4">/</span>
+            <span>SEO/SEM</span>
+          </div>
+          <div>
+            <b class="">10</b>
+            <span class="px-4">/</span>
+            <span>Loyalty & Rewards</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shopify Theme -->
+    <section class="py-10">
+      <div
+        class="container mx-auto md:max-w-[90%] lg:max-w-[80%] flex justify-between items-center"
+      >
+        <div class="1/2 max-w-[600px]">
+          <h2 class="text-[50px] mb-5">
+            Our Shopify Theme development Process
+          </h2>
+          <div class="flex items-center gap-4 py-10">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="39.466"
+              height="39.466"
+              viewBox="0 0 39.466 39.466"
+            >
+              <g
+                id="Icon_feather-plus-circle"
+                data-name="Icon feather-plus-circle"
+                transform="translate(-1.5 -1.5)"
+              >
+                <path
+                  id="Path_249"
+                  data-name="Path 249"
+                  d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
+                  fill="none"
+                  stroke="#477501"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                />
+                <path
+                  id="Path_251"
+                  data-name="Path 251"
+                  d="M12,18H30.544"
+                  transform="translate(0.005 3.278)"
+                  fill="none"
+                  stroke="#477501"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                />
+              </g>
+            </svg>
+            <p class="text-[30px]">Identifying Customer Requirements</p>
+          </div>
+          <p class="p-5">
+            The first and most important phase is gathering customer
+            requirements. Our experts might ask you a few questions to identify
+            your needs and requirements.
+          </p>
+          <div class="flex items-center gap-4 pt-14">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="39.466"
+              height="39.466"
+              viewBox="0 0 39.466 39.466"
+            >
+              <g
+                id="Icon_feather-plus-circle"
+                data-name="Icon feather-plus-circle"
+                transform="translate(-1.5 -1.5)"
+              >
+                <path
+                  id="Path_249"
+                  data-name="Path 249"
+                  d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
+                  fill="none"
+                  stroke="#477501"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                />
+                <path
+                  id="Path_250"
+                  data-name="Path 250"
+                  d="M18,12V30.545"
+                  transform="translate(3.277 0.005)"
+                  fill="none"
+                  stroke="#477501"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                />
+                <path
+                  id="Path_251"
+                  data-name="Path 251"
+                  d="M12,18H30.544"
+                  transform="translate(0.005 3.278)"
+                  fill="none"
+                  stroke="#477501"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                />
+              </g>
+            </svg>
+            <p class="text-[30px]">Designing process</p>
+          </div>
+          <div class="flex items-center gap-4 py-20">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="39.466"
+              height="39.466"
+              viewBox="0 0 39.466 39.466"
+            >
+              <g
+                id="Icon_feather-plus-circle"
+                data-name="Icon feather-plus-circle"
+                transform="translate(-1.5 -1.5)"
+              >
+                <path
+                  id="Path_249"
+                  data-name="Path 249"
+                  d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
+                  fill="none"
+                  stroke="#477501"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                />
+                <path
+                  id="Path_250"
+                  data-name="Path 250"
+                  d="M18,12V30.545"
+                  transform="translate(3.277 0.005)"
+                  fill="none"
+                  stroke="#477501"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                />
+                <path
+                  id="Path_251"
+                  data-name="Path 251"
+                  d="M12,18H30.544"
+                  transform="translate(0.005 3.278)"
+                  fill="none"
+                  stroke="#477501"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="3"
+                />
+              </g>
+            </svg>
+            <p class="text-[30px]">Launch</p>
+          </div>
+        </div>
+        <div>
+          <img src="./shopify/shopify-theme.png" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Portfolio Section -->
+    <section class="py-10">
+      <div
+        class="container mx-auto md:max-w-[90%] lg:max-w-[80%] flex items-center flex-col"
+      >
+        <h2 class="text-[57px] py-3">OUR WORK PORTFOLIO</h2>
+        <div class="w-2/3 flex justify-between items-center text-[41px] py-10">
+          <button class="p-2 border-b-2 border-brand text-brand">All</button>
+          <button class="p-2">Mobile</button>
+          <button class="p-2">Website</button>
+        </div>
+        <div class="grid grid-cols-2 py-5 w-full gap-x-16 gap-y-20">
+          <div class="max-w-[700px] text-[32px]">
+            <img src="./shopify/tech.png" />
+            <p class="pb-3 pt-8 m-0">
+              Shopify but for real-estate investement industry
+            </p>
+            <button class="text-brand border-b border-black pr-2">
+              Case Study
+            </button>
+          </div>
+          <div class="max-w-[700px] text-[32px]">
+            <img src="./shopify/ecommerce.png" />
+            <p class="pb-3 pt-8 m-0">
+              E-commerce redesign for an NYC based menswear apparel label
+            </p>
+            <button class="text-brand border-b border-black pr-2">
+              Case Study
+            </button>
+          </div>
+          <div class="max-w-[700px] text-[32px]">
+            <img src="./shopify/board.png" />
+            <p class="pb-3 pt-8 m-0">
+              User friendly Shopify e-commerce of vehicle-grade scooters
+            </p>
+            <button class="text-brand border-b border-black pr-2">
+              Case Study
+            </button>
+          </div>
+          <div class="max-w-[700px] text-[32px]">
+            <img src="./shopify/fintech.png" />
+            <p class="pb-3 pt-8 m-0">
+              Elevating a FinTech brand to increase credibility and conversions
+            </p>
+            <button class="text-brand border-b border-black pr-2">
+              Case Study
+            </button>
+          </div>
+          <div class="max-w-[700px] text-[32px]">
+            <img src="./shopify/broad-mobile.png" />
+            <p class="pb-3 pt-8 m-0">
+              Bold website for an advanced conversational advertising platform
+            </p>
+            <button class="text-brand border-b border-black pr-2">
+              Case Study
+            </button>
+          </div>
+          <div class="max-w-[700px] text-[32px]">
+            <img src="./shopify/wordpress.png" />
+            <p class="pb-3 pt-8 m-0">
+              Making WordPress and HubSpot work for algorithmic crypto pros
+            </p>
+            <button class="text-brand border-b border-black pr-2">
+              Case Study
+            </button>
+          </div>
+        </div>
+        <div class="py-20">
+          <button
+            class="w-[340px] bg-brand text-white py-4 font-medium rounded-full text-[32px]"
+          >
+            Explore More
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact us section -->
+    <section class="py-10">
+      <div
+        class="container mx-auto md:max-w-[90%] lg:max-w-[80%] flex justify-between"
+      >
+        <div class="w-1/2">
+          <p class="text-grey mb-3">Let's Talk</p>
+          <h2 class="text-[50px] font-bold mb-20">Contact Us</h2>
+          <form class="">
+            <div class="flex py-5">
+              <span class="w-1/2">
+                <p class="font-bold">Full Name</p>
+                <input
+                  placeholder="John"
+                  class="px-4 py-3 border my-1 w-full"
+                />
+              </span>
+              <span class="w-1/2">
+                <p class="font-bold">Email</p>
+                <input
+                  placeholder="John@example.com"
+                  class="px-4 py-3 border my-1 w-full"
+                />
+              </span>
+            </div>
+            <div class="w-full my-10">
+              <p class="font-bold">Message</p>
+              <input
+                placeholder="Message"
+                class="px-4 py-3 border my-1 w-full"
+              />
+            </div>
+            <div class="flex justify-between pr-4">
+              <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+              <input type="file" />
+            </div>
+            <input type="submit" value="Send" class="text-white bg-brand w-32 text-center py-3 my-10  rounded-xl" />
+          </form>
+        </div>
+        <div class="w-1/5">
+          <p class="text-grey pb-5">Follow</p>
+          <div class="flex gap-8 mb-8">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-behance"></i>
+          </div>
+          <p class="text-grey mt-20">Write</p>
+          <div class="my-3 font-bold">
+            <h4>info@digitalwaze.com</h4>
+            <h4>(123) 345 356 4545</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </body>
+</html>

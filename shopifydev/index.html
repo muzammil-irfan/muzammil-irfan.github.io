@@ -36,18 +36,32 @@
         },
       };
     </script>
+    <script>
+      function handleClick(value){
+        const arr = ["all","mobile","website"];
+        arr.map(item=>{
+          if(item !== value){
+            const elementId = document.getElementById(item);
+            elementId.className = "p-2";
+          } else {
+            const elementIdActive = document.getElementById(value);
+            elementIdActive.className = "p-2 border-b-2 border-brand text-brand"
+          }
+        })
+      }
+    </script>
   </head>
   <body>
-    <header class="w-full flex py-4 shadow-md sticky top-0 bg-white z-2">
+    <header class="w-full md:flex py-4 shadow-md sticky top-0 bg-white z-2 px-3">
       <div
-        class="flex justify-between container mx-auto md:max-w-[90%] lg:max-w-[80%]"
+        class="flex justify-between items-center container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%]"
       >
         <div>
           <a href="#">
             <img src="./shopify/logo.png" class="max-w-[150px]" />
           </a>
         </div>
-        <div class="flex gap-10 text-lg items-center">
+        <div class="gap-10 text-lg items-center hidden md:flex md:ml-auto">
           <div class="text-brand gap-5 flex">
             <a href="#" class="border-b-2 border-brand p-1"> Shopify </a>
             <a href="#" class="p-1"> Magento </a>
@@ -58,35 +72,53 @@
             Contact Us
           </button>
         </div>
+        <div>
+          <button class="text-white bg-brand px-2 py-1 rounded-md md:hidden">
+            Contact Us
+          </button>
+        </div>
       </div>
+        <div class="text-brand justify-around py-3  flex md:hidden">
+          <a href="#" class="border-b-2 border-brand p-1"> Shopify </a>
+          <a href="#" class="p-1"> Magento </a>
+          <a href="#" class="p-1"> Wordpress </a>
+          <a href="#" class="p-1"> Webflow </a>
+        </div>
     </header>
 
     <!-- Banner Section -->
-    <section class="bg-[url('/shopify/banner-full.png')] h-[600px] bg-cover bg-no-repeat">
-        <div class="text-white  h-full container mx-auto">
-            <div class="w-1/2 h-full flex justify-center gap-1 flex-col">
-                <h2 class="text-4xl leading-10">
-                    We Transform Everyday Brands Into Industry Leaders With Shopify.
-                </h2>
-                <p class="text-lg my-2">
-                    Turn your eCommerce business into a reality with our expert Shopify developers. Our custom eCommerce solutions will help you achieve your goal faster in the business world.
-                </p>
-                <button
-            class="bg-white text-brand rounded-3xl w-[340px] pl-5 text-start py-4"
+    <section
+      class="bg-[url('./shopify/banner-full.png')] h-[150px] sm:h-[250px] md:h-[350px] xl:h-[600px] bg-cover bg-right"
+    >
+      <div class="text-white h-full container px-3 mx-auto">
+        <div
+          class="w-2/3 max-w-[50vw] sm:max-w-[360px] md:text-[450px] md:w-1/2 md:max-w-full h-full flex justify-center gap-2 flex-col pl-5"
+        >
+          <h2 class="text-[10px] sm:text-lg md:text-xl xl:text-4xl">
+            We Transform Everyday Brands Into Industry Leaders With Shopify.
+          </h2>
+          <p class="text-[8px] sm:text-sm md:text-base xl:text-lg sm:my-2">
+            Turn your eCommerce business into a reality with our expert Shopify
+            developers. Our custom eCommerce solutions will help you achieve
+            your goal faster in the business world.
+          </p>
+          <button
+            class="bg-white text-brand rounded-3xl text-[8px] sm:text-sm w-fit sm:w-2/3 xl:w-[240px] p-1 sm:pl-5 sm:py-2 text-start xl:py-4"
           >
-            Get A Free Consultation 
+            Get A Free Consultation
           </button>
-            </div>
-
         </div>
+      </div>
     </section>
 
     <!-- Shopify services section -->
-    <section class="container mx-auto py-5">
-      <h2 class="text-brand text-center my-4 lg:text-[50px]">
+    <section class="container px-3 mx-auto py-5 ">
+      <h2
+        class="text-brand text-center my-4 text-3xl md:text-4xl lg:text-[50px]"
+      >
         Shopify services we offer
       </h2>
-      <div class="grid grid-cols-3 gap-3">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
         <div class="border rounded-md p-8">
           <img src="./shopify/shopify-plus-integration.png" />
           <h3 class="text-brand text-2xl my-3">
@@ -148,13 +180,18 @@
     <section class="relative py-10">
       <!-- Green part -->
       <div class="bg-brand text-white">
-        <div class="container mx-auto md:max-w-[90%] lg:max-w-[80%] py-20">
-          <div class="w-1/2 max-w-[700px]">
-            <h2 class="text-5xl">
+        <div
+          class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] py-5 xl:py-20"
+        >
+          <div class="md:w-1/2 md:max-w-[45%]">
+            <div class="md:hidden pb-5">
+              <img src="./shopify/best-in-class.png" />
+            </div>
+            <h2 class="text-2xl mb-2 2xl:text-5xl">
               Best-In-Class <br />
               Shopify consultant service
             </h2>
-            <p class="text-2xl my-12">
+            <p class="2xl:text-2xl 2xl:my-12">
               With more than 3,000 five-star reviews and over 2,600 eCommerce
               stores leveraging our custom development services, IT-Geeks prides
               itself on being an industry-leading Shopify development company –
@@ -165,28 +202,30 @@
           </div>
         </div>
       </div>
-      <div class="container mx-auto md:max-w-[90%] lg:max-w-[80%] py-10">
-        <div class="w-1/2 max-w-[700px]">
-          <h2 class="text-5xl text-brand">
+      <div
+        class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] py-5 xl:py-10"
+      >
+        <div class="md:w-1/2 md:max-w-[45%]">
+          <h2 class="text-2xl mb-2 2xl:text-5xl text-brand">
             Driven By Results. Fueled By Innovation.
           </h2>
-          <p class="text-2xl my-8">
+          <p class="2xl:text-2xl my-4 2xl:my-8">
             As a highly-rated and qualified Shopify website development company,
             we know how to take your eCommerce site to new heights – boosting
             sales, generating more leads, and conquering the competitive
             landscape.
           </p>
           <button
-            class="bg-brand text-white rounded-3xl w-[340px] text-center py-4"
+            class="bg-brand text-white rounded-3xl px-4 sm:w-[340px] text-center py-4"
           >
             Get A Free <b>Consultation </b>
           </button>
         </div>
       </div>
       <!-- This is for image -->
-      <div class="absolute top-0 w-full h-full">
+      <div class="absolute top-0 w-full h-full hidden md:block">
         <div
-          class="container mx-auto md:max-w-[90%] lg:max-w-[80%] flex justify-end items-center h-full"
+          class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] flex justify-end items-center h-full"
         >
           <div class="w-1/2 text-end">
             <img src="./shopify/best-in-class.png" />
@@ -196,29 +235,19 @@
     </section>
 
     <!-- Shopify Services -->
-    <section class="py-10">
-      <div class="container mx-auto md:max-w-[90%] lg:max-w-[80%]">
+    <section class="py-10 bg-[#F6F6F6]">
+      <div class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%]">
         <p class="my-6 text-2xl">SHOPIFY SERVICES</p>
         <h3 class="text-[44px] mb-4">
           <b class="text-brand">We love working,</b>
           on custom shopify apps, <br />
           Below are some of features
         </h3>
-        <div class="my-10 grid grid-cols-3 text-[22px] gap-10">
+        <div class="my-10 grid md:grid-cols-3 text-[22px] gap-10">
           <div>
             <b class="">01</b>
             <span class="px-4">/</span>
             <span>Shopping Cart</span>
-          </div>
-          <div>
-            <b class="">06</b>
-            <span class="px-4">/</span>
-            <span>Hosting</span>
-          </div>
-          <div>
-            <b class="">11</b>
-            <span class="px-4">/</span>
-            <span>Media</span>
           </div>
           <div>
             <b class="">02</b>
@@ -226,29 +255,9 @@
             <span>Shipping Returns</span>
           </div>
           <div>
-            <b class="">07</b>
-            <span class="px-4">/</span>
-            <span>Server Management</span>
-          </div>
-          <div>
-            <b class="">12</b>
-            <span class="px-4">/</span>
-            <span>Social Media</span>
-          </div>
-          <div>
             <b class="">03</b>
             <span class="px-4">/</span>
             <span>Multi Screen</span>
-          </div>
-          <div>
-            <b class="">08</b>
-            <span class="px-4">/</span>
-            <span>Analytics</span>
-          </div>
-          <div>
-            <b class="">13</b>
-            <span class="px-4">/</span>
-            <span>Alerts & Notifications</span>
           </div>
           <div>
             <b class="">04</b>
@@ -256,25 +265,60 @@
             <span>Universal Login</span>
           </div>
           <div>
-            <b class="">09</b>
-            <span class="px-4">/</span>
-            <span>Content Management</span>
-          </div>
-          <div>
-            <b class="">14</b>
-            <span class="px-4">/</span>
-            <span>Location & Services</span>
-          </div>
-          <div>
             <b class="">05</b>
             <span class="px-4">/</span>
             <span>SEO/SEM</span>
           </div>
           <div>
-            <b class="">10</b>
+              <b class="">06</b>
+              <span class="px-4">/</span>
+              <span>Hosting</span>
+            </div>
+            <div>
+              <b class="">07</b>
+              <span class="px-4">/</span>
+              <span>Server Management</span>
+            </div>
+            <div>
+              <b class="">08</b>
+              <span class="px-4">/</span>
+              <span>Analytics</span>
+            </div>
+            <div>
+              <b class="">09</b>
+              <span class="px-4">/</span>
+              <span>Content Management</span>
+            </div>
+            <div>
+              <b class="">10</b>
+              <span class="px-4">/</span>
+              <span>Loyalty & Rewards</span>
+            </div>
+            <div>
+              <b class="">11</b>
+              <span class="px-4">/</span>
+              <span>Media</span>
+            </div>
+            
+            <div>
+              <b class="">12</b>
+              <span class="px-4">/</span>
+              <span>Social Media</span>
+            </div>
+            
+          <div>
+            <b class="">13</b>
             <span class="px-4">/</span>
-            <span>Loyalty & Rewards</span>
+            <span>Alerts & Notifications</span>
           </div>
+          
+          <div>
+            <b class="">14</b>
+            <span class="px-4">/</span>
+            <span>Location & Services</span>
+          </div>
+          
+          
         </div>
       </div>
     </section>
@@ -282,10 +326,10 @@
     <!-- Shopify Theme -->
     <section class="py-10">
       <div
-        class="container mx-auto md:max-w-[90%] lg:max-w-[80%] flex justify-between items-center"
+        class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] flex flex-col md:flex-row justify-between items-center"
       >
-        <div class="1/2 max-w-[600px]">
-          <h2 class="text-[50px] mb-5">
+        <div class="md:w-1/2 md:max-w-[600px]">
+          <h2 class="text-4xl md:text-[50px] mb-5">
             Our Shopify Theme development Process
           </h2>
           <div class="flex items-center gap-4 py-10">
@@ -323,9 +367,9 @@
                 />
               </g>
             </svg>
-            <p class="text-[30px]">Identifying Customer Requirements</p>
+            <p class="text-2xl md:text-[30px]">Identifying Customer Requirements</p>
           </div>
-          <p class="p-5">
+          <p class="p-5 bg-[#5B910A0D] text-black">
             The first and most important phase is gathering customer
             requirements. Our experts might ask you a few questions to identify
             your needs and requirements.
@@ -376,7 +420,7 @@
                 />
               </g>
             </svg>
-            <p class="text-[30px]">Designing process</p>
+            <p class="text-2xl md:text-[30px]">Designing process</p>
           </div>
           <div class="flex items-center gap-4 py-20">
             <svg
@@ -424,7 +468,7 @@
                 />
               </g>
             </svg>
-            <p class="text-[30px]">Launch</p>
+            <p class="text-2xl md:text-[30px]">Launch</p>
           </div>
         </div>
         <div>
@@ -436,15 +480,17 @@
     <!-- Work Portfolio Section -->
     <section class="py-10">
       <div
-        class="container mx-auto md:max-w-[90%] lg:max-w-[80%] flex items-center flex-col"
+        class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] flex items-center flex-col"
       >
-        <h2 class="text-[57px] py-3">OUR WORK PORTFOLIO</h2>
-        <div class="w-2/3 flex justify-between items-center text-[41px] py-10">
-          <button class="p-2 border-b-2 border-brand text-brand">All</button>
-          <button class="p-2">Mobile</button>
-          <button class="p-2">Website</button>
+        <h2 class="text-3xl md:text-4xl lg:text-[57px] py-3">OUR WORK PORTFOLIO</h2>
+        <div
+          class="w-2/3 flex justify-between items-center lg:text-[41px] py-10"
+        >
+          <button class="p-2 border-b-2 border-brand text-brand" id="all" onclick="handleClick('all')">All</button>
+          <button class="p-2" id="mobile" onclick="handleClick('mobile')">Mobile</button>
+          <button class="p-2" id="website" onclick="handleClick('website')">Website</button>
         </div>
-        <div class="grid grid-cols-2 py-5 w-full gap-x-16 gap-y-20">
+        <div class="grid md:grid-cols-2 py-5 w-full gap-x-16 gap-y-20">
           <div class="max-w-[700px] text-[32px]">
             <img src="./shopify/tech.png" />
             <p class="pb-3 pt-8 m-0">
@@ -511,20 +557,20 @@
     </section>
 
     <!-- Contact us section -->
-    <section class="py-10">
+    <section class="py-10 bg-[#F6F6F6]">
       <div
-        class="container mx-auto md:max-w-[90%] lg:max-w-[80%] flex justify-between"
+        class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] lg:flex justify-between"
       >
-        <div class="w-1/2">
+        <div class="lg:w-1/2">
           <p class="text-grey mb-3">Let's Talk</p>
           <h2 class="text-[50px] font-bold mb-20">Contact Us</h2>
           <form class="">
             <div class="flex py-5">
-              <span class="w-1/2">
+              <span class="w-1/2 pr-2">
                 <p class="font-bold">Full Name</p>
                 <input
                   placeholder="John"
-                  class="px-4 py-3 border my-1 w-full"
+                  class="px-4 py-3 border my-1 w-full "
                 />
               </span>
               <span class="w-1/2">
@@ -546,19 +592,23 @@
               <div class="g-recaptcha" data-sitekey="your_site_key"></div>
               <input type="file" />
             </div>
-            <input type="submit" value="Send" class="text-white bg-brand w-32 text-center py-3 my-10  rounded-xl" />
+            <input
+              type="submit"
+              value="Send"
+              class="text-white bg-brand w-32 text-center py-3 my-10 rounded-xl"
+            />
           </form>
         </div>
-        <div class="w-1/5">
-          <p class="text-grey pb-5">Follow</p>
-          <div class="flex gap-8 mb-8">
+        <div class="lg:w-1/5">
+          <p class="text-grey pb-5 text-md">Follow</p>
+          <div class="flex gap-8 mb-8 text-xl">
             <i class="fa-brands fa-facebook-f"></i>
             <i class="fa-brands fa-instagram"></i>
             <i class="fa-brands fa-linkedin-in"></i>
             <i class="fa-brands fa-behance"></i>
           </div>
-          <p class="text-grey mt-20">Write</p>
-          <div class="my-3 font-bold">
+          <p class="text-grey mt-20 text-md">Write</p>
+          <div class="my-3 font-bold text-2xl ">
             <h4>info@digitalwaze.com</h4>
             <h4>(123) 345 356 4545</h4>
           </div>
@@ -566,6 +616,6 @@
       </div>
     </section>
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></s>
   </body>
 </html>

@@ -12,7 +12,9 @@
         font-family: "Montserrat", sans-serif;
         scroll-behavior: smooth;
       }
-
+      .collapser {
+        cursor: pointer;
+      }
     </style>
     <link
       rel="stylesheet"
@@ -37,24 +39,53 @@
           },
         },
       };
-    </script>
-    <script>
-      function handleClick(value){
-        const arr = ["all","mobile","website"];
-        arr.map(item=>{
-          if(item !== value){
-            const elementId = document.getElementById(item);
-            elementId.className = "p-2";
-          } else {
-            const elementIdActive = document.getElementById(value);
-            elementIdActive.className = "p-2 border-b-2 border-brand text-brand"
-          }
-        })
-      }
+      const workPortfolioData = {
+        website: [
+          {
+            title: "Shopify but for real-estate investement industry",
+            image: "./shopify/tech.png",
+            href: "#",
+          },
+          {
+            title:
+              "E-commerce redesign for an NYC based menswear apparel label",
+            image: "./shopify/ecommerce.png",
+            href: "",
+          },
+          {
+            title: "User friendly Shopify e-commerce of vehicle-grade scooters",
+            image: "./shopify/board.png",
+            href: "#",
+          },
+          {
+            title:
+              "Elevating a FinTech brand to increase credibility and conversions",
+            image: "./shopify/fintech.png",
+            href: "#",
+          },
+        ],
+        mobile: [
+          {
+            title:
+              "Bold website for an advanced conversational advertising platform",
+            image: "./shopify/broad-mobile.png",
+            href: "#",
+          },
+          {
+            title:
+              "Making WordPress and HubSpot work for algorithmic crypto pros",
+            image: "./shopify/wordpress.png",
+            href: "#",
+          },
+        ],
+      };
+      let tab = "all";
     </script>
   </head>
   <body>
-    <header class="w-full md:flex py-4 shadow-md sticky top-0 bg-white z-10 px-3">
+    <header
+      class="w-full md:flex py-4 shadow-md sticky top-0 bg-white z-10 px-3"
+    >
       <div
         class="flex justify-between items-center container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%]"
       >
@@ -70,22 +101,29 @@
             <a href="#" class="p-1"> Wordpress </a>
             <a href="#" class="p-1"> Webflow </a>
           </div>
-          <a href="#contact" class="text-white bg-brand px-3 rounded-md py-1" style="cursor:pointer;">
+          <a
+            href="#contact"
+            class="text-white bg-brand px-3 rounded-md py-1"
+            style="cursor: pointer"
+          >
             Contact Us
           </a>
         </div>
         <div>
-          <a href="#contact" class="text-white bg-brand px-2 py-1 rounded-md md:hidden">
+          <a
+            href="#contact"
+            class="text-white bg-brand px-2 py-1 rounded-md md:hidden"
+          >
             Contact Us
           </a>
         </div>
       </div>
-        <div class="text-brand justify-around py-3  flex md:hidden">
-          <a href="#" class="border-b-2 border-brand p-1"> Shopify </a>
-          <a href="#" class="p-1"> Magento </a>
-          <a href="#" class="p-1"> Wordpress </a>
-          <a href="#" class="p-1"> Webflow </a>
-        </div>
+      <div class="text-brand justify-around py-3 flex md:hidden">
+        <a href="#" class="border-b-2 border-brand p-1"> Shopify </a>
+        <a href="#" class="p-1"> Magento </a>
+        <a href="#" class="p-1"> Wordpress </a>
+        <a href="#" class="p-1"> Webflow </a>
+      </div>
     </header>
 
     <!-- Banner Section -->
@@ -105,9 +143,9 @@
             your goal faster in the business world.
           </p>
           <a
-            class="bg-white text-brand rounded-3xl text-[8px] sm:text-sm w-fit sm:w-2/3 xl:w-[240px] px-2 py-1 sm:pl-5  sm:py-2 text-start xl:py-4"
+            class="bg-white text-brand rounded-3xl text-[8px] sm:text-sm w-fit sm:w-2/3 xl:w-[240px] px-2 py-1 sm:pl-5 sm:py-2 text-start xl:py-4"
             href="#contact"
-            style="cursor: pointer;"
+            style="cursor: pointer"
           >
             Get A Free Consultation
           </a>
@@ -116,7 +154,7 @@
     </section>
 
     <!-- Shopify services section -->
-    <section class="container px-3 mx-auto py-5 lg:py-10 ">
+    <section class="container px-3 mx-auto py-5 lg:py-10">
       <h2
         class="text-brand text-center my-4 text-2xl sm:text-3xl md:text-4xl lg:text-[50px]"
       >
@@ -125,7 +163,7 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
         <div class="border rounded-md p-8">
           <img src="./shopify/shopify-plus-integration.png" />
-          <h3 class="text-brand text-xl sm:text-2xl my-3">
+          <h3 class="text-brand text-xl 2xl:text-2xl my-3">
             Shopify Plus <b>integration</b>
           </h3>
           <p class="text-grey">
@@ -135,7 +173,7 @@
         </div>
         <div class="border rounded-md p-8">
           <img src="./shopify/shopify-plus-migration.png" />
-          <h3 class="text-brand text-xl sm:text-2xl my-3">
+          <h3 class="text-brand text-xl 2xl:text-2xl my-3">
             Shopify Plus <b>migration</b>
           </h3>
           <p class="text-grey">
@@ -144,7 +182,7 @@
         </div>
         <div class="border rounded-md p-8">
           <img src="./shopify/shopify-plus-design.png" />
-          <h3 class="text-brand text-xl sm:text-2xl my-3">
+          <h3 class="text-brand text-xl 2xl:text-2xl my-3">
             Shopify Plus store <b>design</b>
           </h3>
           <p class="text-grey">
@@ -153,7 +191,9 @@
         </div>
         <div class="border rounded-md p-8">
           <img src="./shopify/free-consultation.png" />
-          <h3 class="text-brand text-xl sm:text-2xl my-3">Get a free consultation</h3>
+          <h3 class="text-brand text-xl 2xl:text-2xl my-3">
+            Get a free consultation
+          </h3>
           <p class="text-grey">
             Separate your back-end infrastructure from your front-end customer
             touchpoints
@@ -161,7 +201,9 @@
         </div>
         <div class="border rounded-md p-8">
           <img src="./shopify/shopify-plus-support.png" />
-          <h3 class="text-brand text-xl sm:text-2xl my-3">Shopify Plus <b>support</b></h3>
+          <h3 class="text-brand text-xl 2xl:text-2xl my-3">
+            Shopify Plus <b>support</b>
+          </h3>
           <p class="text-grey">
             Ensure the growth of your store and prevent downtime and revenue
             losses
@@ -169,7 +211,7 @@
         </div>
         <div class="border rounded-md p-8">
           <img src="./shopify/shopify-plus-app.png" />
-          <h3 class="text-brand text-xl sm:text-2xl my-3">
+          <h3 class="text-brand text-xl 2xl:text-2xl my-3">
             Shopify Plus <b>app development</b>
           </h3>
           <p class="text-grey">
@@ -207,13 +249,13 @@
         </div>
       </div>
       <div
-        class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] py-5 xl:py-10 "
+        class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] py-5 xl:py-10"
       >
         <div class="md:w-1/2 md:max-w-[45%]">
           <h2 class="text-2xl mb-2 2xl:text-5xl text-brand">
             Driven By Results. Fueled By Innovation.
           </h2>
-          <p class="2xl:text-2xl mt-4 mb-10  2xl:my-8">
+          <p class="2xl:text-2xl mt-4 mb-10 2xl:my-8">
             As a highly-rated and qualified Shopify website development company,
             we know how to take your eCommerce site to new heights – boosting
             sales, generating more leads, and conquering the competitive
@@ -222,10 +264,9 @@
           <div class="md:hidden py-4">
             <a
               href="#contact"
-                class="bg-brand text-white rounded-3xl px-4 sm:w-[340px] text-center py-4  "
-                style="cursor:pointer;"
-                
-              >
+              class="bg-brand text-white rounded-3xl px-4 sm:w-[340px] text-center py-4"
+              style="cursor: pointer"
+            >
               Get A Free <b>Consultation </b>
             </a>
           </div>
@@ -236,16 +277,15 @@
         <div
           class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] flex justify-end items-center h-full"
         >
-        <div class="flex justify-start items-end h-full w-full pb-3 lg:pb-10">
-          <a
-            href="#contact"
-              class="bg-brand text-white rounded-3xl px-4 sm:w-[340px] text-center py-4 "
-              style="cursor:pointer;"
-              
+          <div class="flex justify-start items-end h-full w-full pb-3 lg:pb-10">
+            <a
+              href="#contact"
+              class="bg-brand text-white rounded-3xl px-4 sm:w-[340px] text-center py-4"
+              style="cursor: pointer"
             >
-            Get A Free <b>Consultation </b>
-          </a>
-        </div>
+              Get A Free <b>Consultation </b>
+            </a>
+          </div>
           <div class="w-1/2 text-end">
             <img src="./shopify/best-in-class.png" />
           </div>
@@ -256,13 +296,17 @@
     <!-- Shopify Services -->
     <section class="py-5 sm:py-10 bg-[#F6F6F6]">
       <div class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%]">
-        <p class="my-3 md:my-6 text-lg sm:text-2xl">SHOPIFY SERVICES</p>
-        <h3 class="text-2xl sm:text-4xl lg:text-5xl mb-4">
+        <p class="my-3 md:my-6 text-sm md:text-xl 2xl:text-2xl">
+          SHOPIFY SERVICES
+        </p>
+        <h3 class="text-md sm:text-4xl 2xl:text-5xl mb-4">
           <b class="text-brand">We love working,</b>
-          on custom shopify apps, <br />
+          on custom shopify apps, <br class="hidden md:block" />
           Below are some of features
         </h3>
-        <div class="my-10 grid sm:grid-cols-2 lg:grid-cols-3 text-lg md:text-[18px] xl:text-[22px] gap-y-10 gap-x-2 xl:gap-x-5 ">
+        <div
+          class="my-10 grid sm:grid-cols-2 lg:grid-cols-3 text-sm md:text-[18px] xl:text-[22px] gap-y-5 md:gap-y-10 gap-x-2 xl:gap-x-5"
+        >
           <div>
             <b class="">01</b>
             <span class="px-4">/</span>
@@ -289,55 +333,53 @@
             <span>SEO/SEM</span>
           </div>
           <div>
-              <b class="">06</b>
-              <span class="px-4">/</span>
-              <span>Hosting</span>
-            </div>
-            <div>
-              <b class="">07</b>
-              <span class="px-4">/</span>
-              <span>Server Management</span>
-            </div>
-            <div>
-              <b class="">08</b>
-              <span class="px-4">/</span>
-              <span>Analytics</span>
-            </div>
-            <div class="w-max">
-              <b class="">09</b>
-              <span class="px-4">/</span>
-              <span class="">Content Management</span>
-            </div>
-            <div>
-              <b class="">10</b>
-              <span class="px-4">/</span>
-              <span>Loyalty & Rewards</span>
-            </div>
-            <div>
-              <b class="">11</b>
-              <span class="px-4">/</span>
-              <span>Media</span>
-            </div>
-            
-            <div>
-              <b class="">12</b>
-              <span class="px-4">/</span>
-              <span>Social Media</span>
-            </div>
-            
+            <b class="">06</b>
+            <span class="px-4">/</span>
+            <span>Hosting</span>
+          </div>
+          <div>
+            <b class="">07</b>
+            <span class="px-4">/</span>
+            <span>Server Management</span>
+          </div>
+          <div>
+            <b class="">08</b>
+            <span class="px-4">/</span>
+            <span>Analytics</span>
+          </div>
+          <div class="w-max">
+            <b class="">09</b>
+            <span class="px-4">/</span>
+            <span class="">Content Management</span>
+          </div>
+          <div>
+            <b class="">10</b>
+            <span class="px-4">/</span>
+            <span>Loyalty & Rewards</span>
+          </div>
+          <div>
+            <b class="">11</b>
+            <span class="px-4">/</span>
+            <span>Media</span>
+          </div>
+
+          <div>
+            <b class="">12</b>
+            <span class="px-4">/</span>
+            <span>Social Media</span>
+          </div>
+
           <div>
             <b class="">13</b>
             <span class="px-4">/</span>
             <span>Alerts & Notifications</span>
           </div>
-          
+
           <div>
             <b class="">14</b>
             <span class="px-4">/</span>
             <span>Location & Services</span>
           </div>
-          
-          
         </div>
       </div>
     </section>
@@ -347,150 +389,184 @@
       <div
         class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] flex flex-col md:flex-row justify-between items-center"
       >
-        <div class="md:w-1/2 md:max-w-[600px]">
-          <h2 class="text-2xl md:text-5xl mb-2 md:mb-5">
+        <div class="2xl:w-1/2 md:max-w-[600px]">
+          <h2 class="text-2xl md:text-3xl 2xl:text-5xl mb-2 md:mb-5">
             Our Shopify Theme development Process
           </h2>
-          <div class="flex items-center gap-4 py-5 md:py-10">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="39.466"
-              height="39.466"
-              viewBox="0 0 39.466 39.466"
-              class="w-[30px] md:w-[39px]"
-            >
-              <g
-                id="Icon_feather-plus-circle"
-                data-name="Icon feather-plus-circle"
-                transform="translate(-1.5 -1.5)"
-              >
-                <path
-                  id="Path_249"
-                  data-name="Path 249"
-                  d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
-                  fill="none"
-                  stroke="#477501"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
-                />
-                <path
-                  id="Path_251"
-                  data-name="Path 251"
-                  d="M12,18H30.544"
-                  transform="translate(0.005 3.278)"
-                  fill="none"
-                  stroke="#477501"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
-                />
-              </g>
-            </svg>
-            <p class="text-md sm:text-xl md:text-[30px]">Identifying Customer Requirements</p>
+          <div class="collapser pb-5 md:pb-10" onclick="collapser(0)">
+            <div class="flex items-center gap-4">
+              <div class="svg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="39.466"
+                  height="39.466"
+                  viewBox="0 0 39.466 39.466"
+                  class="w-[30px] xl:w-[39px] plus"
+                >
+                  <g
+                    id="Icon_feather-plus-circle"
+                    data-name="Icon feather-plus-circle"
+                    transform="translate(-1.5 -1.5)"
+                  >
+                    <path
+                      id="Path_249"
+                      data-name="Path 249"
+                      d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
+                      fill="none"
+                      stroke="#477501"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                    />
+                    <path
+                      id="Path_251"
+                      data-name="Path 251"
+                      d="M12,18H30.544"
+                      transform="translate(0.005 3.278)"
+                      fill="none"
+                      stroke="#477501"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <p class="text-md sm:text-xl md:text-2xl 2xl:text-[30px]">
+                Identifying Customer Requirements
+              </p>
+            </div>
+            <p class="p-5 bg-[#5B910A0D] text-sm md:text-base text-black mt-3">
+              The first and most important phase is gathering customer
+              requirements. Our experts might ask you a few questions to
+              identify your needs and requirements.
+            </p>
           </div>
-          <p class="p-5 bg-[#5B910A0D] text-sm md:text-base text-black">
-            The first and most important phase is gathering customer
-            requirements. Our experts might ask you a few questions to identify
-            your needs and requirements.
-          </p>
-          <div class="flex items-center gap-4 pt-6 md:pt-14">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="39.466"
-              height="39.466"
-              viewBox="0 0 39.466 39.466"
-              class="w-[30px] md:w-[39px]"
+          <div class="collapser pb-6 md:pb-12" onclick="collapser(1)">
+            <div class="flex items-center gap-4">
+              <div class="svg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="39.466"
+                  height="39.466"
+                  viewBox="0 0 39.466 39.466"
+                  class="w-[30px] xl:w-[39px] minus"
+                >
+                  <g
+                    id="Icon_feather-plus-circle"
+                    data-name="Icon feather-plus-circle"
+                    transform="translate(-1.5 -1.5)"
+                  >
+                    <path
+                      id="Path_249"
+                      data-name="Path 249"
+                      d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
+                      fill="none"
+                      stroke="#477501"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                    />
+                    <path
+                      id="Path_250"
+                      data-name="Path 250"
+                      d="M18,12V30.545"
+                      transform="translate(3.277 0.005)"
+                      fill="none"
+                      stroke="#477501"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                    />
+                    <path
+                      id="Path_251"
+                      data-name="Path 251"
+                      d="M12,18H30.544"
+                      transform="translate(0.005 3.278)"
+                      fill="none"
+                      stroke="#477501"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <p class="text-md sm:text-xl md:text-2xl 2xl:text-[30px]">
+                Designing process
+              </p>
+            </div>
+            <p
+              class="p-5 bg-[#5B910A0D] text-sm md:text-base text-black mt-3"
+              style="display: none"
             >
-              <g
-                id="Icon_feather-plus-circle"
-                data-name="Icon feather-plus-circle"
-                transform="translate(-1.5 -1.5)"
-              >
-                <path
-                  id="Path_249"
-                  data-name="Path 249"
-                  d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
-                  fill="none"
-                  stroke="#477501"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
-                />
-                <path
-                  id="Path_250"
-                  data-name="Path 250"
-                  d="M18,12V30.545"
-                  transform="translate(3.277 0.005)"
-                  fill="none"
-                  stroke="#477501"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
-                />
-                <path
-                  id="Path_251"
-                  data-name="Path 251"
-                  d="M12,18H30.544"
-                  transform="translate(0.005 3.278)"
-                  fill="none"
-                  stroke="#477501"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
-                />
-              </g>
-            </svg>
-            <p class="text-md sm:text-xl md:text-[30px]">Designing process</p>
+              The first and most important phase is gathering customer
+              requirements. Our experts might ask you a few questions to
+              identify your needs and requirements.
+            </p>
           </div>
-          <div class="flex items-center gap-4 py-10 md:py-20">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="39.466"
-              height="39.466"
-              viewBox="0 0 39.466 39.466"
-              class="w-[30px] md:w-[39px]"
+          <div class="collapser pb-6 md:pb-12" onclick="collapser(2)">
+            <div class="flex items-center gap-4">
+              <div class="svg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="39.466"
+                  height="39.466"
+                  viewBox="0 0 39.466 39.466"
+                  class="w-[30px] xl:w-[39px]"
+                >
+                  <g
+                    id="Icon_feather-plus-circle"
+                    data-name="Icon feather-plus-circle"
+                    transform="translate(-1.5 -1.5)"
+                  >
+                    <path
+                      id="Path_249"
+                      data-name="Path 249"
+                      d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
+                      fill="none"
+                      stroke="#477501"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                    />
+                    <path
+                      id="Path_250"
+                      data-name="Path 250"
+                      d="M18,12V30.545"
+                      transform="translate(3.277 0.005)"
+                      fill="none"
+                      stroke="#477501"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                    />
+                    <path
+                      id="Path_251"
+                      data-name="Path 251"
+                      d="M12,18H30.544"
+                      transform="translate(0.005 3.278)"
+                      fill="none"
+                      stroke="#477501"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <p class="text-md sm:text-xl md:text-2xl 2xl: text-[30px]">
+                Launch
+              </p>
+            </div>
+            <p
+              class="p-5 bg-[#5B910A0D] text-sm md:text-base text-black mt-3"
+              style="display: none"
             >
-              <g
-                id="Icon_feather-plus-circle"
-                data-name="Icon feather-plus-circle"
-                transform="translate(-1.5 -1.5)"
-              >
-                <path
-                  id="Path_249"
-                  data-name="Path 249"
-                  d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
-                  fill="none"
-                  stroke="#477501"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
-                />
-                <path
-                  id="Path_250"
-                  data-name="Path 250"
-                  d="M18,12V30.545"
-                  transform="translate(3.277 0.005)"
-                  fill="none"
-                  stroke="#477501"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
-                />
-                <path
-                  id="Path_251"
-                  data-name="Path 251"
-                  d="M12,18H30.544"
-                  transform="translate(0.005 3.278)"
-                  fill="none"
-                  stroke="#477501"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
-                />
-              </g>
-            </svg>
-            <p class="text-md sm:text-xl md:text-[30px]">Launch</p>
+              The first and most important phase is gathering customer
+              requirements. Our experts might ask you a few questions to
+              identify your needs and requirements.
+            </p>
           </div>
         </div>
         <div>
@@ -504,73 +580,35 @@
       <div
         class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] flex items-center flex-col"
       >
-        <h2 class="text-2xl md:text-4xl lg:text-[57px] py-3">OUR WORK PORTFOLIO</h2>
+        <h2 class="text-2xl md:text-4xl lg:text-[57px] py-3">
+          OUR WORK PORTFOLIO
+        </h2>
         <div
           class="w-2/3 flex justify-between items-center lg:text-[41px] py-5 md:py-10"
         >
-          <button class="p-2 border-b-2 border-brand text-brand" id="all" onclick="handleClick('all')">All</button>
-          <button class="p-2" id="mobile" onclick="handleClick('mobile')">Mobile</button>
-          <button class="p-2" id="website" onclick="handleClick('website')">Website</button>
-        </div>
-        <div class="grid md:grid-cols-2 py-5 w-full gap-x-16 gap-y-20">
-          <div class="max-w-[700px] text-xl md:text-[32px]">
-            <img src="./shopify/tech.png" />
-            <p class="pb-3 pt-8 m-0">
-              Shopify but for real-estate investement industry
-            </p>
-            <button class="text-brand border-b border-black pr-2">
-              Case Study
-            </button>
-          </div>
-          <div class="max-w-[700px] text-xl md:text-[32px]">
-            <img src="./shopify/ecommerce.png" />
-            <p class="pb-3 pt-8 m-0">
-              E-commerce redesign for an NYC based menswear apparel label
-            </p>
-            <button class="text-brand border-b border-black pr-2">
-              Case Study
-            </button>
-          </div>
-          <div class="max-w-[700px] text-xl md:text-[32px]">
-            <img src="./shopify/board.png" />
-            <p class="pb-3 pt-8 m-0">
-              User friendly Shopify e-commerce of vehicle-grade scooters
-            </p>
-            <button class="text-brand border-b border-black pr-2">
-              Case Study
-            </button>
-          </div>
-          <div class="max-w-[700px] text-xl md:text-[32px]">
-            <img src="./shopify/fintech.png" />
-            <p class="pb-3 pt-8 m-0">
-              Elevating a FinTech brand to increase credibility and conversions
-            </p>
-            <button class="text-brand border-b border-black pr-2">
-              Case Study
-            </button>
-          </div>
-          <div class="max-w-[700px] text-xl md:text-[32px]">
-            <img src="./shopify/broad-mobile.png" />
-            <p class="pb-3 pt-8 m-0">
-              Bold website for an advanced conversational advertising platform
-            </p>
-            <button class="text-brand border-b border-black pr-2">
-              Case Study
-            </button>
-          </div>
-          <div class="max-w-[700px] text-xl md:text-[32px]">
-            <img src="./shopify/wordpress.png" />
-            <p class="pb-3 pt-8 m-0">
-              Making WordPress and HubSpot work for algorithmic crypto pros
-            </p>
-            <button class="text-brand border-b border-black pr-2">
-              Case Study
-            </button>
-          </div>
-        </div>
-        <div class="py-5 md:py-20  ">
           <button
-            class="w-[150px] sm:w-[200px]  lg:w-[340px] bg-brand text-white py-2 sm:py-4 font-medium rounded-full text-lg lg:text-[32px]"
+            class="p-2 border-b-2 border-brand text-brand"
+            id="all"
+            onclick="handleClick('all')"
+          >
+            All
+          </button>
+          <button class="p-2" id="mobile" onclick="handleClick('mobile')">
+            Mobile
+          </button>
+          <button class="p-2" id="website" onclick="handleClick('website')">
+            Website
+          </button>
+        </div>
+        <div
+          class="grid md:grid-cols-2 py-5 w-full gap-x-16 gap-y-20"
+          id="work-portfolio"
+        >
+        </div>
+        <div class="py-5 md:py-20">
+          <button
+            class="w-[150px] sm:w-[200px] lg:w-[340px] bg-brand text-white py-2 sm:py-4 font-medium rounded-full text-lg lg:text-[32px]"
+            onclick="handleExplore()"
           >
             Explore More
           </button>
@@ -580,20 +618,22 @@
 
     <!-- Contact us section -->
     <div id="contact"></div>
-    <section class=" bg-[#F6F6F6]" >
+    <section class="bg-[#F6F6F6]">
       <div
         class="container py-10 px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] lg:flex justify-between"
       >
         <div class="lg:w-1/2">
           <p class="text-grey mb-3">Let's Talk</p>
-          <h2 class="text-3xl lg:text-[50px] font-bold mb-5 md:mb-20">Contact Us</h2>
+          <h2 class="text-3xl lg:text-[50px] font-bold mb-5 md:mb-20">
+            Contact Us
+          </h2>
           <form class="text-sm sm:text-base">
             <div class="flex flex-col gap-3 md:gap-0 md:flex-row py-5">
               <span class="md:w-1/2 pr-2">
                 <p class="font-bold">Full Name</p>
                 <input
                   placeholder="John"
-                  class="px-4 py-3 border my-1 w-full "
+                  class="px-4 py-3 border my-1 w-full"
                 />
               </span>
               <span class="md:w-1/2">
@@ -607,12 +647,11 @@
             <div class="w-full my-4 md:my-10">
               <p class="font-bold">Message</p>
               <textarea
-              placeholder="Message..."
+                placeholder="Message..."
                 rows="4"
                 cols="50"
                 class="px-2 md:px-4 py-3 border my-1 w-full"
               ></textarea>
-              
             </div>
             <div class="md:flex justify-between pr-4">
               <div class="g-recaptcha" data-sitekey="your_site_key"></div>
@@ -634,14 +673,166 @@
             <i class="fa-brands fa-behance"></i>
           </div>
           <p class="text-grey mt-20 text-md">Write</p>
-          <div class="my-3 font-bold text-2xl ">
+          <div class="my-3 font-bold text-2xl">
             <h4>info@digitalwaze.com</h4>
             <h4>(123) 345 356 4545</h4>
           </div>
         </div>
       </div>
     </section>
-
+    <script>
+      function workPortfolioLoader(arr) {
+        try{
+          const workPortfolioElement = document.getElementById("work-portfolio");
+          let workPortfolioInitialElement = "";
+          arr.map((item) => {
+            const portfolioCard = `
+            <div class="max-w-[700px] text-xl md:text-[32px]">
+                  <img src="${item.image}" />
+                  <p class="pb-3 pt-8 m-0">
+                    ${item.title}
+                  </p>
+                  <a href="${item.href}" class="text-brand border-b border-black pr-2">
+                    Case Study
+                  </a>
+                </div>
+                `;
+            workPortfolioInitialElement += portfolioCard;
+          });
+          workPortfolioElement.innerHTML = workPortfolioInitialElement;
+        } catch (err){
+          console.log("err",err)
+        }
+      }
+      //This click function is handling mobile website
+      function handleClick(value) {
+        const arr = ["all", "mobile", "website"];
+        arr.map((item) => {
+          if (item !== value) {
+            const elementId = document.getElementById(item);
+            elementId.className = "p-2";
+          } else {
+            const elementIdActive = document.getElementById(value);
+            elementIdActive.className =
+            "p-2 border-b-2 border-brand text-brand";
+            tab = value;
+          }
+        });
+        if(value === "all"){
+          workPortfolioLoader([...workPortfolioData.website,...workPortfolioData.mobile].splice(0,4));
+        }else{
+          workPortfolioLoader(workPortfolioData[value].splice(0,4));
+        }
+      }
+      function handleExplore(){
+        if(tab === "all"){
+          workPortfolioLoader([...workPortfolioData.website,...workPortfolioData.mobile])
+        } else {
+          workPortfolioLoader(workPortfolioData[tab]);
+        }
+      }
+      function collapser(index) {
+        const minus = `<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="39.466"
+                  height="39.466"
+                  viewBox="0 0 39.466 39.466"
+                  class="w-[30px] xl:w-[39px] plus"
+                >
+                  <g
+                    id="Icon_feather-plus-circle"
+                    data-name="Icon feather-plus-circle"
+                    transform="translate(-1.5 -1.5)"
+                  >
+                    <path
+                      id="Path_249"
+                      data-name="Path 249"
+                      d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
+                      fill="none"
+                      stroke="#477501"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                    />
+                    <path
+                      id="Path_251"
+                      data-name="Path 251"
+                      d="M12,18H30.544"
+                      transform="translate(0.005 3.278)"
+                      fill="none"
+                      stroke="#477501"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                    />
+                  </g>
+                </svg>`;
+        const plusIcon = `<svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="39.466"
+                height="39.466"
+                viewBox="0 0 39.466 39.466"
+                class="w-[30px] xl:w-[39px]"
+              >
+                <g
+                  id="Icon_feather-plus-circle"
+                  data-name="Icon feather-plus-circle"
+                  transform="translate(-1.5 -1.5)"
+                >
+                  <path
+                    id="Path_249"
+                    data-name="Path 249"
+                    d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
+                    fill="none"
+                    stroke="#477501"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                  />
+                  <path
+                    id="Path_250"
+                    data-name="Path 250"
+                    d="M18,12V30.545"
+                    transform="translate(3.277 0.005)"
+                    fill="none"
+                    stroke="#477501"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                  />
+                  <path
+                    id="Path_251"
+                    data-name="Path 251"
+                    d="M12,18H30.544"
+                    transform="translate(0.005 3.278)"
+                    fill="none"
+                    stroke="#477501"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                  />
+                </g>
+              </svg>`;
+        const collaperDivs = document.getElementsByClassName("collapser");
+        //taking style from particular div
+        let firstChildDisplayStyle = collaperDivs[index].children[1].style;
+        if (firstChildDisplayStyle.display == "none") {
+          //revealing here
+          firstChildDisplayStyle.display = "block";
+          //changing icon from below code to minus
+          collaperDivs[index].childNodes[1].childNodes[1].innerHTML = minus;
+        } else {
+          //collapsing here
+          firstChildDisplayStyle.display = "none";
+          //Changing icon from below code to plus
+          collaperDivs[index].childNodes[1].childNodes[1].innerHTML = plusIcon;
+        }
+      }
+      
+      window.onload=()=>{
+        workPortfolioLoader([...workPortfolioData.website,...workPortfolioData.mobile].splice(0,4));
+      };
+    </script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </body>
 </html>

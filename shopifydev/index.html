@@ -609,6 +609,7 @@
           <button
             class="w-[150px] sm:w-[200px] lg:w-[340px] bg-brand text-white py-2 sm:py-4 font-medium rounded-full text-lg lg:text-[32px]"
             onclick="handleExplore()"
+            id="explore"
           >
             Explore More
           </button>
@@ -681,11 +682,12 @@
       </div>
     </section>
     <script>
-      function workPortfolioLoader(arr) {
+      function workPortfolioLoader(arr,explore) {
         try{
           const workPortfolioElement = document.getElementById("work-portfolio");
           let workPortfolioInitialElement = "";
-          arr.map((item) => {
+          const newArr = explore ? arr : [...arr].splice(0,4);
+          newArr.map((item) => {
             const portfolioCard = `
             <div class="max-w-[700px] text-xl md:text-[32px]">
                   <img src="${item.image}" />
@@ -700,6 +702,12 @@
             workPortfolioInitialElement += portfolioCard;
           });
           workPortfolioElement.innerHTML = workPortfolioInitialElement;
+          if(arr.length > 4){
+            document.getElementById("explore").style.display = "block";
+          } else {
+            document.getElementById("explore").style.display = "none";
+          }
+          
         } catch (err){
           console.log("err",err)
         }
@@ -720,17 +728,18 @@
           
         });
         if(value === "all"){
-          workPortfolioLoader([...workPortfolioData.website,...workPortfolioData.mobile].splice(0,4));
+          workPortfolioLoader([...workPortfolioData.website,...workPortfolioData.mobile],false);
         }else{
-          workPortfolioLoader([...workPortfolioData[value]].splice(0,4));
+          workPortfolioLoader([...workPortfolioData[value]],false);
         }
       }
       function handleExplore(){
         if(tab === "all"){
-          workPortfolioLoader([...workPortfolioData.website,...workPortfolioData.mobile])
+          workPortfolioLoader([...workPortfolioData.website,...workPortfolioData.mobile],true);
         } else {
-          workPortfolioLoader([...workPortfolioData[tab]]);
+          workPortfolioLoader([...workPortfolioData[tab]],true);
         }
+        document.getElementById("explore").style.display = "none";
       }
       function collapser(index) {
         const minus = `<svg
@@ -831,7 +840,7 @@
       }
       
       window.onload=()=>{
-        workPortfolioLoader([...workPortfolioData.website,...workPortfolioData.mobile].splice(0,4));
+        workPortfolioLoader([...workPortfolioData.website,...workPortfolioData.mobile],false);
       };
     </script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>

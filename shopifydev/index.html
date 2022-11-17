@@ -717,18 +717,19 @@
             "p-2 border-b-2 border-brand text-brand";
             tab = value;
           }
+          
         });
         if(value === "all"){
           workPortfolioLoader([...workPortfolioData.website,...workPortfolioData.mobile].splice(0,4));
         }else{
-          workPortfolioLoader(workPortfolioData[value].splice(0,4));
+          workPortfolioLoader([...workPortfolioData[value]].splice(0,4));
         }
       }
       function handleExplore(){
         if(tab === "all"){
           workPortfolioLoader([...workPortfolioData.website,...workPortfolioData.mobile])
         } else {
-          workPortfolioLoader(workPortfolioData[tab]);
+          workPortfolioLoader([...workPortfolioData[tab]]);
         }
       }
       function collapser(index) {

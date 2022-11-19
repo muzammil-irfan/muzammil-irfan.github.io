@@ -97,8 +97,8 @@
             <img src="./shopify/logo.png" class="max-w-[150px]" />
           </a>
         </div>
-        <div class="gap-20 text-lg items-center hidden md:flex md:ml-auto">
-          <div class="text-brand gap-5 flex">
+        <div class="gap-10 lg:gap-20 text-lg items-center hidden md:flex md:ml-auto">
+          <div class="text-brand gap-3 lg:gap-5 flex">
             <a href="#" class="border-b-2 border-brand p-1"> Shopify </a>
             <a href="#" class="p-1"> Magento </a>
             <a href="#" class="p-1"> Wordpress </a>
@@ -106,7 +106,7 @@
           </div>
           <a
             href="#contact"
-            class="text-white bg-brand pl-3 pr-6 rounded-md py-1"
+            class="text-white bg-brand pl-3 pr-4 lg:pr-6 rounded-md py-1 whitespace-nowrap"
             style="cursor: pointer"
           >
             Contact Us
@@ -271,7 +271,7 @@
           <div class="md:hidden py-4">
             <a
               href="#contact"
-              class="bg-brand text-white rounded-3xl pl-3 pr-6 text-center py-4"
+              class="bg-brand text-white rounded-3xl pl-3 pr-6 text-center py-2 lg:py-4"
               style="cursor: pointer"
             >
               Get A Free <b>Consultation </b>
@@ -287,7 +287,7 @@
           <div class="flex justify-start items-end h-full w-full pb-3 lg:pb-10">
             <a
               href="#contact"
-              class="bg-brand text-white rounded-3xl pl-5 pr-10 text-center py-4"
+              class="bg-brand text-white rounded-3xl pl-5 pr-10 text-center py-2 lg:py-4"
               style="cursor: pointer"
             >
               Get A Free <b>Consultation </b>
@@ -402,7 +402,7 @@
           </h2>
           <div class="lg:min-h-[680px] pt-10">
 
-            <div class="collapser mb-5 md:mb-10 overflow-hidden transition-all" style="height: 150px;" onclick="collapser(0)">
+            <div class="collapser mb-5 md:mb-10 overflow-hidden transition-all" style="height: 160px;" onclick="collapser(0)">
               <div class="flex items-center gap-4">
                 <div class="svg">
                   <svg
@@ -445,7 +445,7 @@
                   Identifying Customer Requirements
                 </p>
               </div>
-              <p class="p-5 bg-[#5B910A0D] text-sm md:text-base text-black mt-3">
+              <p class="p-5 bg-[#5B910A0D] text-sm xl:text-base text-black mt-3">
                 The first and most important phase is gathering customer
                 requirements. Our experts might ask you a few questions to
                 identify your needs and requirements.
@@ -870,7 +870,7 @@
         console.log(firstChildDisplayStyle)
         if(firstChildDisplayStyle.height === "50px"){
           //revealing here
-          firstChildDisplayStyle.height = "150px";
+          firstChildDisplayStyle.height = "160px";
           //changing icon from below code to minus
           collaperDivs[index].childNodes[1].childNodes[1].innerHTML = minus;
         } else {

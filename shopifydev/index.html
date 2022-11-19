@@ -11,10 +11,12 @@
       body {
         font-family: "Montserrat", sans-serif;
         scroll-behavior: smooth;
+        
       }
       .collapser {
         cursor: pointer;
       }
+
     </style>
     <link
       rel="stylesheet"
@@ -36,7 +38,7 @@
           fontFamily: {
             body: "Montserrat, sans-serif",
             display: "Montserrat, sans-serif",
-          },
+          }
         },
       };
       const workPortfolioData = {
@@ -128,43 +130,47 @@
 
     <!-- Banner Section -->
     <section
-      class="bg-[url('./shopify/banner-full.png')] h-[160px] sm:h-[250px] md:h-[350px] xl:h-[600px] bg-cover bg-right"
+      class="relative bg-[url('./shopify/banner.png')] h-[160px] sm:h-[250px] md:h-[350px] xl:h-[600px] bg-cover bg-right"
     >
       <div class="text-white h-full container px-3 mx-auto">
         <div
-          class="w-2/3 max-w-[50vw] sm:max-w-[360px] md:text-[450px] md:w-1/2 md:max-w-full h-full flex justify-center gap-2 flex-col pl-5"
+          class="w-2/3 max-w-[50vw] sm:max-w-[360px] md:w-1/2 md:max-w-full h-full flex justify-center gap-2 flex-col pl-5"
         >
-          <h2 class="text-[10px] sm:text-lg md:text-xl xl:text-4xl">
+          <h2 class="text-[10px] sm:text-lg md:text-xl xl:text-4xl ">
             We Transform Everyday Brands Into Industry Leaders With Shopify.
           </h2>
-          <p class="text-[8px] sm:text-sm md:text-base xl:text-lg sm:my-2">
+          <p class="text-[8px] sm:text-sm md:text-base xl:text-lg sm:my-2 tracking-[8]">
             Turn your eCommerce business into a reality with our expert Shopify
             developers. Our custom eCommerce solutions will help you achieve
             your goal faster in the business world.
           </p>
-          <a
-            class="bg-white text-brand rounded-3xl text-[8px] sm:text-sm w-fit sm:w-2/3 xl:w-[240px] px-2 py-1 sm:pl-5 sm:py-2 text-start xl:py-4"
-            href="#contact"
-            style="cursor: pointer"
-          >
-            Get A Free Consultation
-          </a>
+            <a
+              class="bg-white text-brand rounded-3xl text-[8px] sm:text-sm  w-min pr-6 pl-2 py-1 sm:pl-5 sm:py-2 text-start xl:py-4 "
+              href="#contact"
+              style="cursor: pointer"
+            >
+            <p class="whitespace-nowrap">
+              Get A Free Consultation
+            </p>
+            </a>
+          </div>
         </div>
       </div>
+      
     </section>
 
     <!-- Shopify services section -->
     <section class="container px-3 mx-auto py-5 lg:py-10">
       <h2
-        class="text-brand text-center my-4 text-2xl sm:text-3xl md:text-4xl lg:text-[50px]"
+        class="text-brand text-center my-4 text-2xl sm:text-3xl md:text-4xl lg:text-[50px] xl:py-5"
       >
         Shopify services we offer
       </h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 xl:py-10">
         <div class="border rounded-md p-8">
           <img src="./shopify/shopify-plus-integration.png" />
-          <h3 class="text-brand text-xl 2xl:text-2xl my-3">
-            Shopify Plus <b>integration</b>
+          <h3 class=" text-xl 2xl:text-2xl my-3">
+            Shopify Plus <b class="text-brand">integration</b>
           </h3>
           <p class="text-grey">
             Simplify your business operations with flexible Shopify API
@@ -173,8 +179,8 @@
         </div>
         <div class="border rounded-md p-8">
           <img src="./shopify/shopify-plus-migration.png" />
-          <h3 class="text-brand text-xl 2xl:text-2xl my-3">
-            Shopify Plus <b>migration</b>
+          <h3 class=" text-xl 2xl:text-2xl my-3">
+            Shopify Plus <b class="text-brand">migration</b>
           </h3>
           <p class="text-grey">
             Re-platform to Shopify Plus to scale fast without limits
@@ -182,8 +188,8 @@
         </div>
         <div class="border rounded-md p-8">
           <img src="./shopify/shopify-plus-design.png" />
-          <h3 class="text-brand text-xl 2xl:text-2xl my-3">
-            Shopify Plus store <b>design</b>
+          <h3 class=" text-xl 2xl:text-2xl my-3">
+            Shopify Plus store <b class="text-brand">design</b>
           </h3>
           <p class="text-grey">
             Design an intuitive Shopify website to reflect your unique business
@@ -201,8 +207,8 @@
         </div>
         <div class="border rounded-md p-8">
           <img src="./shopify/shopify-plus-support.png" />
-          <h3 class="text-brand text-xl 2xl:text-2xl my-3">
-            Shopify Plus <b>support</b>
+          <h3 class=" text-xl 2xl:text-2xl my-3">
+            Shopify Plus <b class="text-brand">support</b>
           </h3>
           <p class="text-grey">
             Ensure the growth of your store and prevent downtime and revenue
@@ -211,8 +217,8 @@
         </div>
         <div class="border rounded-md p-8">
           <img src="./shopify/shopify-plus-app.png" />
-          <h3 class="text-brand text-xl 2xl:text-2xl my-3">
-            Shopify Plus <b>app development</b>
+          <h3 class=" text-xl 2xl:text-2xl my-3">
+            Shopify Plus <b class="text-brand">app development</b>
           </h3>
           <p class="text-grey">
             Bring your store at your customers&apos; fingertips with a Shopify
@@ -229,15 +235,15 @@
         <div
           class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] py-5 xl:py-20"
         >
-          <div class="md:w-1/2 md:max-w-[45%]">
+          <div class="md:w-1/2  md:max-w-[45%] 2xl:w-[750px] 2xl:max-w-full">
             <div class="md:hidden pb-5">
               <img src="./shopify/best-in-class.png" />
             </div>
-            <h2 class="text-2xl mb-2 2xl:text-5xl">
+            <h2 class="text-2xl mb-2 2xl:text-[50px] 2xl:leading-[61px]">
               Best-In-Class <br />
               Shopify consultant service
             </h2>
-            <p class="2xl:text-2xl 2xl:my-12">
+            <p class="2xl:text-2xl tracking-[8] 2xl:my-12 ">
               With more than 3,000 five-star reviews and over 2,600 eCommerce
               stores leveraging our custom development services, IT-Geeks prides
               itself on being an industry-leading Shopify development company –
@@ -252,7 +258,7 @@
         class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] py-5 xl:py-10"
       >
         <div class="md:w-1/2 md:max-w-[45%]">
-          <h2 class="text-2xl mb-2 2xl:text-5xl text-brand">
+          <h2 class="text-2xl mb-2 2xl:text-[50px] 2xl:leading-[61px] text-brand">
             Driven By Results. Fueled By Innovation.
           </h2>
           <p class="2xl:text-2xl mt-4 mb-10 2xl:my-8">
@@ -286,8 +292,8 @@
               Get A Free <b>Consultation </b>
             </a>
           </div>
-          <div class="w-1/2 text-end">
-            <img src="./shopify/best-in-class.png" />
+          <div class="w-1/2 2xl:w-2/3 text-end">
+            <img src="./shopify/best-in-class.png" class="" />
           </div>
         </div>
       </div>
@@ -299,7 +305,7 @@
         <p class="my-3 md:my-6 text-sm md:text-xl 2xl:text-2xl">
           SHOPIFY SERVICES
         </p>
-        <h3 class="text-md sm:text-4xl 2xl:text-5xl mb-4">
+        <h3 class="text-md sm:text-4xl 2xl:text-[50px] 2xl:leading-[61px] mb-4">
           <b class="text-brand">We love working,</b>
           on custom shopify apps, <br class="hidden md:block" />
           Below are some of features
@@ -390,183 +396,186 @@
         class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] flex flex-col md:flex-row justify-between items-center"
       >
         <div class="2xl:w-1/2 md:max-w-[600px]">
-          <h2 class="text-2xl md:text-3xl 2xl:text-5xl mb-2 md:mb-5">
+          <h2 class="text-2xl md:text-3xl 2xl:text-[50px] 2xl:leading-[61px] mb-2 md:mb-5">
             Our Shopify Theme development Process
           </h2>
-          <div class="collapser pb-5 md:pb-10" onclick="collapser(0)">
-            <div class="flex items-center gap-4">
-              <div class="svg">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="39.466"
-                  height="39.466"
-                  viewBox="0 0 39.466 39.466"
-                  class="w-[30px] xl:w-[39px] plus"
-                >
-                  <g
-                    id="Icon_feather-plus-circle"
-                    data-name="Icon feather-plus-circle"
-                    transform="translate(-1.5 -1.5)"
+          <div class="min-h-[680px] pt-10">
+
+            <div class="collapser pb-5 md:pb-10" onclick="collapser(0)">
+              <div class="flex items-center gap-4">
+                <div class="svg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="39.466"
+                    height="39.466"
+                    viewBox="0 0 39.466 39.466"
+                    class="w-[30px] xl:w-[39px] plus"
                   >
-                    <path
-                      id="Path_249"
-                      data-name="Path 249"
-                      d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
-                      fill="none"
-                      stroke="#477501"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="3"
-                    />
-                    <path
-                      id="Path_251"
-                      data-name="Path 251"
-                      d="M12,18H30.544"
-                      transform="translate(0.005 3.278)"
-                      fill="none"
-                      stroke="#477501"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="3"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      id="Icon_feather-plus-circle"
+                      data-name="Icon feather-plus-circle"
+                      transform="translate(-1.5 -1.5)"
+                    >
+                      <path
+                        id="Path_249"
+                        data-name="Path 249"
+                        d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
+                        fill="none"
+                        stroke="#477501"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                      />
+                      <path
+                        id="Path_251"
+                        data-name="Path 251"
+                        d="M12,18H30.544"
+                        transform="translate(0.005 3.278)"
+                        fill="none"
+                        stroke="#477501"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <p class="text-md sm:text-xl md:text-2xl 2xl:text-[30px]">
+                  Identifying Customer Requirements
+                </p>
               </div>
-              <p class="text-md sm:text-xl md:text-2xl 2xl:text-[30px]">
-                Identifying Customer Requirements
+              <p class="p-5 bg-[#5B910A0D] text-sm md:text-base text-black mt-3">
+                The first and most important phase is gathering customer
+                requirements. Our experts might ask you a few questions to
+                identify your needs and requirements.
               </p>
             </div>
-            <p class="p-5 bg-[#5B910A0D] text-sm md:text-base text-black mt-3">
-              The first and most important phase is gathering customer
-              requirements. Our experts might ask you a few questions to
-              identify your needs and requirements.
-            </p>
-          </div>
-          <div class="collapser pb-6 md:pb-12" onclick="collapser(1)">
-            <div class="flex items-center gap-4">
-              <div class="svg">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="39.466"
-                  height="39.466"
-                  viewBox="0 0 39.466 39.466"
-                  class="w-[30px] xl:w-[39px] minus"
-                >
-                  <g
-                    id="Icon_feather-plus-circle"
-                    data-name="Icon feather-plus-circle"
-                    transform="translate(-1.5 -1.5)"
+            <div class="collapser pb-6 md:pb-12" onclick="collapser(1)">
+              <div class="flex items-center gap-4">
+                <div class="svg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="39.466"
+                    height="39.466"
+                    viewBox="0 0 39.466 39.466"
+                    class="w-[30px] xl:w-[39px] minus"
                   >
-                    <path
-                      id="Path_249"
-                      data-name="Path 249"
-                      d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
-                      fill="none"
-                      stroke="#477501"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="3"
-                    />
-                    <path
-                      id="Path_250"
-                      data-name="Path 250"
-                      d="M18,12V30.545"
-                      transform="translate(3.277 0.005)"
-                      fill="none"
-                      stroke="#477501"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="3"
-                    />
-                    <path
-                      id="Path_251"
-                      data-name="Path 251"
-                      d="M12,18H30.544"
-                      transform="translate(0.005 3.278)"
-                      fill="none"
-                      stroke="#477501"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="3"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      id="Icon_feather-plus-circle"
+                      data-name="Icon feather-plus-circle"
+                      transform="translate(-1.5 -1.5)"
+                    >
+                      <path
+                        id="Path_249"
+                        data-name="Path 249"
+                        d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
+                        fill="none"
+                        stroke="#477501"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                      />
+                      <path
+                        id="Path_250"
+                        data-name="Path 250"
+                        d="M18,12V30.545"
+                        transform="translate(3.277 0.005)"
+                        fill="none"
+                        stroke="#477501"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                      />
+                      <path
+                        id="Path_251"
+                        data-name="Path 251"
+                        d="M12,18H30.544"
+                        transform="translate(0.005 3.278)"
+                        fill="none"
+                        stroke="#477501"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <p class="text-md sm:text-xl md:text-2xl 2xl:text-[30px]">
+                  Designing process
+                </p>
               </div>
-              <p class="text-md sm:text-xl md:text-2xl 2xl:text-[30px]">
-                Designing process
+              <p
+                class="p-5 bg-[#5B910A0D] text-sm md:text-base text-black mt-3"
+                style="display: none"
+              >
+                The first and most important phase is gathering customer
+                requirements. Our experts might ask you a few questions to
+                identify your needs and requirements.
               </p>
             </div>
-            <p
-              class="p-5 bg-[#5B910A0D] text-sm md:text-base text-black mt-3"
-              style="display: none"
-            >
-              The first and most important phase is gathering customer
-              requirements. Our experts might ask you a few questions to
-              identify your needs and requirements.
-            </p>
-          </div>
-          <div class="collapser pb-6 md:pb-12" onclick="collapser(2)">
-            <div class="flex items-center gap-4">
-              <div class="svg">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="39.466"
-                  height="39.466"
-                  viewBox="0 0 39.466 39.466"
-                  class="w-[30px] xl:w-[39px]"
-                >
-                  <g
-                    id="Icon_feather-plus-circle"
-                    data-name="Icon feather-plus-circle"
-                    transform="translate(-1.5 -1.5)"
+            <div class="collapser pb-6 md:pb-12 " onclick="collapser(2)">
+              <div class="flex items-center gap-4">
+                <div class="svg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="39.466"
+                    height="39.466"
+                    viewBox="0 0 39.466 39.466"
+                    class="w-[30px] xl:w-[39px]"
                   >
-                    <path
-                      id="Path_249"
-                      data-name="Path 249"
-                      d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
-                      fill="none"
-                      stroke="#477501"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="3"
-                    />
-                    <path
-                      id="Path_250"
-                      data-name="Path 250"
-                      d="M18,12V30.545"
-                      transform="translate(3.277 0.005)"
-                      fill="none"
-                      stroke="#477501"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="3"
-                    />
-                    <path
-                      id="Path_251"
-                      data-name="Path 251"
-                      d="M12,18H30.544"
-                      transform="translate(0.005 3.278)"
-                      fill="none"
-                      stroke="#477501"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="3"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      id="Icon_feather-plus-circle"
+                      data-name="Icon feather-plus-circle"
+                      transform="translate(-1.5 -1.5)"
+                    >
+                      <path
+                        id="Path_249"
+                        data-name="Path 249"
+                        d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
+                        fill="none"
+                        stroke="#477501"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                      />
+                      <path
+                        id="Path_250"
+                        data-name="Path 250"
+                        d="M18,12V30.545"
+                        transform="translate(3.277 0.005)"
+                        fill="none"
+                        stroke="#477501"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                      />
+                      <path
+                        id="Path_251"
+                        data-name="Path 251"
+                        d="M12,18H30.544"
+                        transform="translate(0.005 3.278)"
+                        fill="none"
+                        stroke="#477501"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <p class="text-md sm:text-xl md:text-2xl 2xl:text-[30px]">
+                  Launch
+                </p>
               </div>
-              <p class="text-md sm:text-xl md:text-2xl 2xl:text-[30px]">
-                Launch
+              <p
+                class="p-5 bg-[#5B910A0D] text-sm md:text-base text-black mt-3 "
+                style="display: none"
+              >
+                The first and most important phase is gathering customer
+                requirements. Our experts might ask you a few questions to
+                identify your needs and requirements.
               </p>
             </div>
-            <p
-              class="p-5 bg-[#5B910A0D] text-sm md:text-base text-black mt-3"
-              style="display: none"
-            >
-              The first and most important phase is gathering customer
-              requirements. Our experts might ask you a few questions to
-              identify your needs and requirements.
-            </p>
           </div>
         </div>
         <div>
@@ -580,7 +589,7 @@
       <div
         class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] flex items-center flex-col"
       >
-        <h2 class="text-2xl md:text-4xl lg:text-[57px] py-3">
+        <h2 class="text-2xl md:text-4xl lg:text-[57px] py-3 ">
           OUR WORK PORTFOLIO
         </h2>
         <div

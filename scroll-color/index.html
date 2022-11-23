@@ -65,7 +65,7 @@
         const section4 = section[3].getBoundingClientRect();
         console.log(svgGroup1,svgGroup2)
         // console.log(window.scrollY,window.innerHeight);
-        if (section2.top > 10 && section2.top -10 < window.innerHeight ){
+        if (section2.top > 80 && section2.top -80 < window.innerHeight ){
             //section 1
             svgGroup1.forEach(element=>{
               element.style.display = "none";
@@ -77,7 +77,7 @@
               element.style.display = "block";
             });
             console.log("section 1");
-          } else if(section3.top > 10 && section3.top -10 < window.innerHeight ){
+          } else if(section3.top > 80 && section3.top -80 < window.innerHeight ){
             // section 2
             
             svgGroup2.forEach(element=>{
@@ -91,7 +91,7 @@
             });
             console.log("section 2");
             
-          } else if(section4.top > 10 && section4.top -10 < window.innerHeight ){
+          } else if(section4.top > 80 && section4.top -80 < window.innerHeight ){
             // section 3
             svgGroup1.forEach(element=>{
               element.style.display = "none";

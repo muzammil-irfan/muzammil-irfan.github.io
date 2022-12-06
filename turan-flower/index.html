@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Turan Flower Hub</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital@1&family=Jacques+Francois&display=swap");
+      html,
+      body {
+        font-family: "Jacques Francois", serif;
+      }
+      .font-italic {
+        font-family: 'Ibarra Real Nova';
+        font-style: italic;
+        color: #000;
+        font-weight: 400;
+        text-align: center;
+        font-size: 14px;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      let page = "home";
+    </script>
+  </head>
+  <body>
+    <header>
+      <p class="text-3xl text-center py-12 bg-[#F8F3F3] text-[#795F5F]" onclick="handleClick('home')">
+        TuranFlowerHub
+      </p>
+    </header>
+    <!-- Home Screen -->
+    <section
+      class="flex flex-col sm:flex-row container mx-auto items-center pt-10 px-3"
+      style="display: flex"
+      id="home-page"
+    >
+      <div
+        class="sm:w-1/2 text-[25px] text-[#AA9494] flex flex-col items-center gap-8"
+      >
+        <button class="w-[300px] py-2 rounded-2xl border" onclick="handleClick('flower')">Shop Flowers</button>
+        <button class="w-[300px] py-2 rounded-2xl border" onclick="handleClick('plant')">Shop Plants</button>
+      </div>
+      <div class="sm:w-1/2">
+        <img src="./assets/flower-home.png" />
+      </div>
+    </section>
+    <!-- Page 2 -->
+    <section class="min-h-[75vh] flex flex-col items-center container mx-auto py-10 md:py-20 xl:py-40" style="display:none;" id="flower-page">
+      <div class="grid md:grid-cols-3 w-full ">
+        <div class="max-w-[280px] mx-auto pb-10">
+          <img src="./assets/flower-1.png" class="mx-auto max-w-[230px] min-h-[230px]" />
+          <button class="w-full mx-1 my-4 py-2 rounded-2xl bg-[#D9D9D9]">
+            Pink Tulips - $77
+          </button>
+          <p class="font-italic">
+            Call to order <br />
+            Exclusively for TuranCyberHub Students only
+          </p>
+        </div>
+        <div class="max-w-[280px] mx-auto pb-10 ">
+          <img src="./assets/flower-2.png" class="mx-auto max-w-[230px] min-h-[230px]" />
+          <button class="w-full mx-1 my-4 py-2 rounded-2xl bg-[#D9D9D9]">
+            Purple Tulips - $55
+          </button>
+          <p class="font-italic">
+            Call to order <br />
+            Exclusively for TuranCyberHub Students only
+          </p>
+        </div>
+        <div class="max-w-[280px] mx-auto pb-10" >
+          <img src="./assets/flower-3.png" class="mx-auto max-w-[230px] min-h-[230px]" />
+          <button class="w-full mx-1 my-4 py-2 rounded-2xl bg-[#D9D9D9]">
+            Pink Tulips - $65
+          </button>
+          <p class="font-italic">
+            Call to order <br />
+            Exclusively for TuranCyberHub Students only
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Page 3 -->
+    <section class="min-h-[75vh] flex flex-col items-center container mx-auto py-10 md:py-20 xl:py-40" style="display:none;" id="plant-page">
+      <div class="grid md:grid-cols-3 w-full">
+        <div class="max-w-[280px] mx-auto pb-10">
+          <img src="./assets/plant-1.png" class="mx-auto  min-h-[360px]" />
+          <button class="w-full mx-1 my-4 py-2 rounded-2xl bg-[#D9D9D9]">
+            Green Plant - $115
+          </button>
+          <p class="font-italic">
+            Call to order <br />
+            Exclusively for TuranCyberHub Students only
+          </p>
+        </div>
+        <div class="max-w-[280px] mx-auto pb-10">
+          <img src="./assets/plant-2.png" class="mx-auto  min-h-[360px]" />
+          <button class="w-full mx-1 my-4 py-2 rounded-2xl bg-[#D9D9D9]">
+            Greenish Plant - $99
+          </button>
+          <p class="font-italic">
+            Call to order <br />
+            Exclusively for TuranCyberHub Students only
+          </p>
+        </div>
+        <div class="max-w-[280px] mx-auto pb-10">
+          <img src="./assets/plant-3.png" class="mx-auto min-h-[360px]" />
+          <button class="w-full mx-1 my-4 py-2 rounded-2xl bg-[#D9D9D9]">
+            Green in Red - $125
+          </button>
+          <p class="font-italic">
+            Call to order <br />
+            Exclusively for TuranCyberHub Students only
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-[#F8F3F3] py-12">
+      <div class="flex justify-center">
+        
+        <p class="text-md">Copyright 2022 (C) TuranFlowerHub</p>
+      </div>
+    </footer>
+
+    <script>
+        function handleClick(type){
+            const homeSection = document.getElementById("home-page");
+            const flowerSection = document.getElementById("flower-page");
+            const plantSection = document.getElementById("plant-page");
+            if(type === "home"){
+                flowerSection.style.display = "none";
+                plantSection.style.display = "none";
+                homeSection.style.display = "flex";
+            } else if(type === "flower"){
+                homeSection.style.display = "none";
+                flowerSection.style.display = "flex";
+            } else {
+                homeSection.style.display = "none";
+                plantSection.style.display = "flex";
+            }
+        }
+    </script>
+  </body>
+</html>

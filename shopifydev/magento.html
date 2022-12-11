@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magento - Shopify Coder</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=regular");
+      html,
+      body {
+        font-family: "Montserrat", sans-serif;
+        scroll-behavior: smooth;
+        
+      }
+      .collapser {
+        cursor: pointer;
+      }
+
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: "#EC6737",
+              grey: "#707070",
+            },
+          },
+          fontFamily: {
+            body: "Montserrat, sans-serif",
+            display: "Montserrat, sans-serif",
+          }
+        },
+      };
+      const workPortfolioData = {
+        website: [
+          {
+            title: "Shopify but for real-estate investement industry",
+            image: "./magento/tech.png",
+            href: "#",
+          },
+          {
+            title:
+              "E-commerce redesign for an NYC based menswear apparel label",
+            image: "./magento/ecommerce.png",
+            href: "",
+          },
+          {
+            title: "User friendly Shopify e-commerce of vehicle-grade scooters",
+            image: "./magento/board.png",
+            href: "#",
+          },
+          {
+            title:
+              "Elevating a FinTech brand to increase credibility and conversions",
+            image: "./magento/fintech.png",
+            href: "#",
+          },
+        ],
+        mobile: [
+          {
+            title:
+              "Bold website for an advanced conversational advertising platform",
+            image: "./magento/broad-mobile.png",
+            href: "#",
+          },
+          {
+            title:
+              "Making WordPress and HubSpot work for algorithmic crypto pros",
+            image: "./magento/wordpress.png",
+            href: "#",
+          },
+        ],
+      };
+      let tab = "all";
+      let file = ""; // To show the file in our own custom input
+    </script>
+  </head>
+  <body>
+    <header
+      class="w-full md:flex py-4 shadow-md sticky top-0 bg-white z-20 px-3"
+    >
+      <div
+        class="flex justify-between items-center container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%]"
+      >
+        <div>
+          <a href="#">
+            <img src="./magento/logo.png" class="max-w-[150px]" />
+          </a>
+        </div>
+        <div class="gap-10 lg:gap-20 text-lg items-center hidden md:flex md:ml-auto">
+          <div class="text-brand gap-3 lg:gap-5 flex">
+            <a href="#" class="p-1"> Shopify </a>
+            <a href="#" class="border-b-2 border-brand p-1"> Magento </a>
+            <a href="#" class="p-1"> Wordpress </a>
+            <a href="#" class="p-1"> Webflow </a>
+          </div>
+          <a
+            href="#contact"
+            class="text-white bg-brand pl-3 pr-4 lg:pr-6 rounded-md py-1 whitespace-nowrap"
+            style="cursor: pointer"
+          >
+            Contact Us
+          </a>
+        </div>
+        <div>
+          <a
+            href="#contact"
+            class="text-white bg-brand pl-2 pr-5 py-1 rounded-md md:hidden"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+      <div class="text-brand justify-around py-3 flex md:hidden">
+        <a href="#" class="p-1"> Shopify </a>
+        <a href="#" class="border-b-2 border-brand p-1"> Magento </a>
+        <a href="#" class="p-1"> Wordpress </a>
+        <a href="#" class="p-1"> Webflow </a>
+      </div>
+    </header>
+
+    <!-- Banner Section -->
+    <section
+      class="relative bg-[url('./magento/banner.png')] h-[160px] sm:h-[250px] md:h-[350px] xl:h-[600px] bg-cover bg-right"
+    >
+      <div class="text-white h-full container px-3 mx-auto">
+        <div
+          class="w-2/3 max-w-[50vw] sm:max-w-[360px] md:w-1/2 md:max-w-full h-full flex justify-center gap-2 flex-col pl-5"
+        >
+          <h2 class="text-[10px] sm:text-lg md:text-xl xl:text-4xl ">
+            Empower Your Business With Magento Ecommerce Solutions
+          </h2>
+          <p class="text-[8px] sm:text-sm md:text-base xl:text-lg sm:my-2 tracking-[8]">
+            Magento is our proficiency and problem-solving is our passion and we perform together as a team to attain your ecommerce business needs. Our skilled and Magento certified developers offer outstanding magento development services to produce an all-inclusive magento ecommerce store.
+          </p>
+            <a
+              class="bg-white text-brand rounded-3xl text-[8px] sm:text-sm  w-min pr-4  md:pr-8 lg:pr-10 pl-2 py-1 md:pl-5 sm:py-2 text-start xl:py-4 "
+              href="#contact"
+              style="cursor: pointer"
+            >
+            <p class="whitespace-nowrap font-semibold">
+              Get A Free Consultation
+            </p>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- Shopify services section -->
+    <section class="container px-3 mx-auto py-5 md:py-10 2xl:py-20">
+      <h2
+        class="text-brand text-center my-4 text-2xl sm:text-3xl md:text-4xl lg:text-[50px] py-5 md:py-10 "
+      >
+      Our Magento Development Services
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 2xl:gap-5 xl:py-10">
+        <div class="relative flex justify-center pt-10 mx-3">
+          <div class=" rounded-full border border-[#D9D2D2] w-fit absolute -translate-y-8 bg-white">
+            <img src="./magento/service-icon-1.png" class="p-10" />
+          </div>
+          <div class=" shadow-lg text-center my-10 pt-20 pb-10 border-t">
+            <div class="p-10">
+              <h3 class="text-2xl ">Custom Magento Web Development</h3>
+              <p class="text-lg py-10">
+                Our Magento developers will use the open-source Magento's ability to provide 3rd party integrations for Magento CE and EE, ERP, and POS integrations multi-vendor deployment and migration services.
+              </p>
+            </div>
+          </div>        
+        </div>
+        <div class="relative flex justify-center pt-10 mx-3">
+          <div class=" rounded-full border border-[#D9D2D2] w-fit absolute -translate-y-8 bg-white">
+            <img src="./magento/service-icon-2.png" class="p-10" />
+          </div>
+          <div class=" shadow-lg text-center my-10 pt-20 pb-10 border-t">
+            <div class="p-10">
+              <h3 class="text-2xl ">Magento Theme <br/> Development From Psd</h3>
+              <p class="text-lg py-10">
+                Do you need a white-labeled Magento theme for your website? We can build highly functional, admin-manageable frontend Magento themes from PSDs, AI, JPG, PNG, and SKETCH.
+              </p>
+            </div>
+          </div>        
+        </div>
+        <div class="relative flex justify-center pt-10 mx-3">
+          <div class=" rounded-full border border-[#D9D2D2] w-fit absolute -translate-y-8 bg-white">
+            <img src="./magento/service-icon-3.png" class="p-10" />
+          </div>
+          <div class=" shadow-lg text-center my-10 pt-20 pb-10 border-t">
+            <div class="p-10">
+              <h3 class="text-2xl ">Custom Magento 
+              <br/>Extension Development</h3>
+              <p class="text-lg py-10">
+                We can create a Magento extension for your eCommerce store or a custom Magento extension to help you with your SAAS services; bug-free coding as per the Magento guidelines and extensions.
+              </p>
+            </div>
+          </div>        
+        </div>
+        <div class="relative flex justify-center pt-10 mx-3">
+          <div class=" rounded-full border border-[#D9D2D2] w-fit absolute -translate-y-8 bg-white">
+            <img src="./magento/service-icon-4.png" class="p-10" />
+          </div>
+          <div class=" shadow-lg text-center my-10 pt-20 pb-10 border-t">
+            <div class="p-10">
+              <h3 class="text-2xl ">Customized Website <br/> Design</h3>
+              <p class="text-lg py-10">
+                Our Magento development team creates beautiful and extraordinary user interface design, resulting in fluent navigation. This helps your visitors get a superior and engaging experience.
+              </p>
+            </div>
+          </div>        
+        </div>
+        <div class="relative flex justify-center pt-10 mx-3">
+          <div class=" rounded-full border border-[#D9D2D2] w-fit absolute -translate-y-8 bg-white">
+            <img src="./magento/service-icon-5.png" class="p-10" />
+          </div>
+          <div class=" shadow-lg text-center my-10 pt-20 pb-10 border-t">
+            <div class="p-10">
+              <h3 class="text-2xl ">
+                Magento Website <br/> Management
+              </h3>
+              <p class="text-lg py-10">
+                We provide everything from website performance optimization to version upgrade, security patches, backup, and more under our Magento website management services.
+              </p>
+            </div>
+          </div>        
+        </div>
+        <div class="relative flex justify-center pt-10 mx-3">
+          <div class=" rounded-full border border-[#D9D2D2] w-fit absolute -translate-y-8 bg-white">
+            <img src="./magento/service-icon-6.png" class="p-10" />
+          </div>
+          <div class=" shadow-lg text-center my-10 pt-20 pb-10 border-t">
+            <div class="p-10">
+              <h3 class="text-2xl ">
+                Support And <br/>Maintenance
+              </h3>
+              <p class="text-lg py-10">
+                Website is down? Need urgent help? We are here to ensure better Magento website operations with a dedicated support service that includes content update, security, speed, backup.
+              </p>
+            </div>
+          </div>        
+        </div>
+      </div>
+    </section>
+
+    <!-- Magento benefits -->
+    <section class="py-5 lg:py-10 bg-brand text-white">
+      <div class="container px-3 mx-auto"> 
+        <p class="my-3 md:my-6 xl:my-10 text-sm md:text-xl 2xl:text-2xl">
+          SHOPIFY SERVICES
+        </p>
+        <h3 class="font-bold text-2xl">
+          Escalating Magento Development Benefits
+        </h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 py-6 xl:py-10 text-black">
+          <div class="bg-white rounded-2xl m-2 py-10 px-5 flex items-center">
+            <p class="w-3/4 text-xl">
+              Improved Performance and Scalability
+            </p>
+            <div class="w-1/4 ">
+              <img src="./magento/benefits-1.png" class="mx-auto"/>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl m-2 py-10 px-5 flex items-center">
+            <p class="w-3/4 text-xl">
+              Powerful Platform
+            </p>
+            <div class="w-1/4 ">
+              <img src="./magento/benefits-2.png" class="mx-auto"/>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl m-2 py-10 px-5 flex items-center">
+            <p class="w-3/4 text-xl">
+              Easy Content Management
+            </p>
+            <div class="w-1/4 ">
+              <img src="./magento/benefits-3.png" class="mx-auto"/>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl m-2 py-10 px-5 flex items-center">
+            <p class="w-3/4 text-xl">
+              Customized Security
+            </p>
+            <div class="w-1/4 ">
+              <img src="./magento/benefits-4.png" class="mx-auto"/>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl m-2 py-10 px-5 flex items-center">
+            <p class="w-3/4 text-xl">
+              Build In Upsells
+            </p>
+            <div class="w-1/4 ">
+              <img src="./magento/benefits-5.png" class="mx-auto"/>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl m-2 py-10 px-5 flex items-center">
+            <p class="w-3/4 text-xl">
+              Cross Sells
+            </p>
+            <div class="w-1/4 ">
+              <img src="./magento/benefits-6.png" class="mx-auto"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Magento web solutions -->
+    <section class="py-10 md:py-20 container px-3 mx-auto md:flex md:gap-5 xl:gap-10 2xl:gap-16">
+      <div class="md:w-1/2 relative md:pt-5 md:pl-5 xl:pt-10 xl:pl-10 2xl:pt-20 2xl:pl-20">
+        <div class="absolute top-0 left-0 hidden md:block">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="230" height="230" viewBox="0 0 230 230">
+            <defs>
+              <clipPath id="clip-path">
+                <rect id="Rectangle_173" data-name="Rectangle 173" width="230" height="230" transform="translate(0 -0.181)" fill="#ec6737"/>
+              </clipPath>
+            </defs>
+            <g id="Group_198" data-name="Group 198" transform="translate(0 0.181)" clip-path="url(#clip-path)">
+              <path id="Path_288" data-name="Path 288" d="M1186.208,63.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-970.795 -51.883)" fill="#ec6737"/>
+              <path id="Path_289" data-name="Path 289" d="M1263.19,0a3.018,3.018,0,0,0,3.018,3.018V0Z" transform="translate(-1036.432 -0.039)" fill="#ec6737"/>
+              <path id="Path_290" data-name="Path 290" d="M1263.19,146.208a3.018,3.018,0,0,0,3.018,3.018V143.19a3.018,3.018,0,0,0-3.018,3.018" transform="translate(-1036.432 -117.52)" fill="#ec6737"/>
+              <path id="Path_291" data-name="Path 291" d="M1106.208,143.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-905.159 -117.52)" fill="#ec6737"/>
+              <path id="Path_292" data-name="Path 292" d="M1026.208,63.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-839.522 -51.883)" fill="#ec6737"/>
+              <path id="Path_293" data-name="Path 293" d="M1103.19,0a3.018,3.018,0,0,0,3.018,3.018A3.018,3.018,0,0,0,1109.226,0h-6.036Z" transform="translate(-905.159 -0.039)" fill="#ec6737"/>
+              <path id="Path_294" data-name="Path 294" d="M946.208,143.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-773.886 -117.52)" fill="#ec6737"/>
+              <path id="Path_295" data-name="Path 295" d="M1186.208,223.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-970.795 -183.156)" fill="#ec6737"/>
+              <path id="Path_296" data-name="Path 296" d="M1263.19,306.208a3.018,3.018,0,0,0,3.018,3.018V303.19a3.018,3.018,0,0,0-3.018,3.018" transform="translate(-1036.432 -248.793)" fill="#ec6737"/>
+              <path id="Path_297" data-name="Path 297" d="M1106.208,303.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-905.159 -248.793)" fill="#ec6737"/>
+              <path id="Path_298" data-name="Path 298" d="M1026.208,223.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-839.522 -183.156)" fill="#ec6737"/>
+              <path id="Path_299" data-name="Path 299" d="M946.208,303.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-773.886 -248.793)" fill="#ec6737"/>
+              <path id="Path_300" data-name="Path 300" d="M866.208,63.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-708.249 -51.883)" fill="#ec6737"/>
+              <path id="Path_301" data-name="Path 301" d="M943.19,0a3.018,3.018,0,0,0,3.018,3.018A3.018,3.018,0,0,0,949.226,0H943.19Z" transform="translate(-773.886 -0.039)" fill="#ec6737"/>
+              <path id="Path_302" data-name="Path 302" d="M786.208,143.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-642.613 -117.52)" fill="#ec6737"/>
+              <path id="Path_303" data-name="Path 303" d="M706.208,63.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-576.976 -51.883)" fill="#ec6737"/>
+              <path id="Path_304" data-name="Path 304" d="M783.19,0a3.018,3.018,0,0,0,3.018,3.018A3.018,3.018,0,0,0,789.226,0H783.19Z" transform="translate(-642.613 -0.039)" fill="#ec6737"/>
+              <path id="Path_305" data-name="Path 305" d="M626.208,143.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-511.339 -117.52)" fill="#ec6737"/>
+              <path id="Path_306" data-name="Path 306" d="M866.208,223.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-708.249 -183.156)" fill="#ec6737"/>
+              <path id="Path_307" data-name="Path 307" d="M786.208,303.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-642.613 -248.793)" fill="#ec6737"/>
+              <path id="Path_308" data-name="Path 308" d="M706.208,223.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-576.976 -183.156)" fill="#ec6737"/>
+              <path id="Path_309" data-name="Path 309" d="M626.208,303.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-511.339 -248.793)" fill="#ec6737"/>
+              <path id="Path_310" data-name="Path 310" d="M1186.208,383.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-970.795 -314.43)" fill="#ec6737"/>
+              <path id="Path_311" data-name="Path 311" d="M1263.19,466.208a3.018,3.018,0,0,0,3.018,3.018V463.19a3.018,3.018,0,0,0-3.018,3.018" transform="translate(-1036.432 -380.066)" fill="#ec6737"/>
+              <path id="Path_312" data-name="Path 312" d="M1106.208,463.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-905.159 -380.066)" fill="#ec6737"/>
+              <path id="Path_313" data-name="Path 313" d="M1026.208,383.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-839.522 -314.43)" fill="#ec6737"/>
+              <path id="Path_314" data-name="Path 314" d="M946.208,463.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-773.886 -380.066)" fill="#ec6737"/>
+              <path id="Path_315" data-name="Path 315" d="M1186.208,543.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-970.795 -445.703)" fill="#ec6737"/>
+              <path id="Path_316" data-name="Path 316" d="M1263.19,626.208a3.018,3.018,0,0,0,3.018,3.018V623.19a3.018,3.018,0,0,0-3.018,3.018" transform="translate(-1036.432 -511.339)" fill="#ec6737"/>
+              <path id="Path_317" data-name="Path 317" d="M1106.208,623.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-905.159 -511.339)" fill="#ec6737"/>
+              <path id="Path_318" data-name="Path 318" d="M1026.208,543.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-839.522 -445.703)" fill="#ec6737"/>
+              <path id="Path_319" data-name="Path 319" d="M946.208,623.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-773.886 -511.339)" fill="#ec6737"/>
+              <path id="Path_320" data-name="Path 320" d="M866.208,383.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-708.249 -314.43)" fill="#ec6737"/>
+              <path id="Path_321" data-name="Path 321" d="M786.208,463.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-642.613 -380.066)" fill="#ec6737"/>
+              <path id="Path_322" data-name="Path 322" d="M706.208,383.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-576.976 -314.43)" fill="#ec6737"/>
+              <path id="Path_323" data-name="Path 323" d="M626.208,463.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-511.339 -380.066)" fill="#ec6737"/>
+              <path id="Path_324" data-name="Path 324" d="M866.208,543.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-708.249 -445.703)" fill="#ec6737"/>
+              <path id="Path_325" data-name="Path 325" d="M786.208,623.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-642.613 -511.339)" fill="#ec6737"/>
+              <path id="Path_326" data-name="Path 326" d="M706.208,543.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-576.976 -445.703)" fill="#ec6737"/>
+              <path id="Path_327" data-name="Path 327" d="M626.208,623.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-511.339 -511.339)" fill="#ec6737"/>
+              <path id="Path_328" data-name="Path 328" d="M546.208,63.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-445.703 -51.883)" fill="#ec6737"/>
+              <path id="Path_329" data-name="Path 329" d="M623.19,0a3.018,3.018,0,0,0,3.018,3.018A3.018,3.018,0,0,0,629.226,0H623.19Z" transform="translate(-511.339 -0.039)" fill="#ec6737"/>
+              <path id="Path_330" data-name="Path 330" d="M466.208,143.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-380.066 -117.52)" fill="#ec6737"/>
+              <path id="Path_331" data-name="Path 331" d="M386.208,63.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-314.43 -51.883)" fill="#ec6737"/>
+              <path id="Path_332" data-name="Path 332" d="M463.19,0a3.018,3.018,0,0,0,3.018,3.018A3.018,3.018,0,0,0,469.226,0H463.19Z" transform="translate(-380.066 -0.039)" fill="#ec6737"/>
+              <path id="Path_333" data-name="Path 333" d="M306.208,143.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-248.793 -117.52)" fill="#ec6737"/>
+              <path id="Path_334" data-name="Path 334" d="M546.208,223.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-445.703 -183.156)" fill="#ec6737"/>
+              <path id="Path_335" data-name="Path 335" d="M466.208,303.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-380.066 -248.793)" fill="#ec6737"/>
+              <path id="Path_336" data-name="Path 336" d="M386.208,223.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-314.43 -183.156)" fill="#ec6737"/>
+              <path id="Path_337" data-name="Path 337" d="M306.208,303.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-248.793 -248.793)" fill="#ec6737"/>
+              <path id="Path_338" data-name="Path 338" d="M226.208,63.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-183.156 -51.883)" fill="#ec6737"/>
+              <path id="Path_339" data-name="Path 339" d="M303.19,0a3.018,3.018,0,0,0,6.036,0H303.19Z" transform="translate(-248.793 -0.039)" fill="#ec6737"/>
+              <path id="Path_340" data-name="Path 340" d="M146.208,143.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-117.52 -117.52)" fill="#ec6737"/>
+              <path id="Path_341" data-name="Path 341" d="M66.208,63.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-51.883 -51.883)" fill="#ec6737"/>
+              <path id="Path_342" data-name="Path 342" d="M0,3.018A3.018,3.018,0,0,0,3.018,0H0Z" transform="translate(-0.039 -0.039)" fill="#ec6737"/>
+              <path id="Path_343" data-name="Path 343" d="M143.19,0a3.018,3.018,0,0,0,3.018,3.018A3.018,3.018,0,0,0,149.226,0H143.19Z" transform="translate(-117.52 -0.039)" fill="#ec6737"/>
+              <path id="Path_344" data-name="Path 344" d="M0,143.19v6.036a3.018,3.018,0,0,0,3.018-3.018A3.018,3.018,0,0,0,0,143.19" transform="translate(-0.039 -117.52)" fill="#ec6737"/>
+              <path id="Path_345" data-name="Path 345" d="M226.208,223.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-183.156 -183.156)" fill="#ec6737"/>
+              <path id="Path_346" data-name="Path 346" d="M146.208,303.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-117.52 -248.793)" fill="#ec6737"/>
+              <path id="Path_347" data-name="Path 347" d="M66.208,223.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-51.883 -183.156)" fill="#ec6737"/>
+              <path id="Path_348" data-name="Path 348" d="M0,303.19v6.036a3.018,3.018,0,0,0,0-6.036" transform="translate(-0.039 -248.793)" fill="#ec6737"/>
+              <path id="Path_349" data-name="Path 349" d="M546.208,383.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-445.703 -314.43)" fill="#ec6737"/>
+              <path id="Path_350" data-name="Path 350" d="M466.208,463.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-380.066 -380.066)" fill="#ec6737"/>
+              <path id="Path_351" data-name="Path 351" d="M386.208,383.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-314.43 -314.43)" fill="#ec6737"/>
+              <path id="Path_352" data-name="Path 352" d="M306.208,463.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-248.793 -380.066)" fill="#ec6737"/>
+              <path id="Path_353" data-name="Path 353" d="M546.208,543.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-445.703 -445.703)" fill="#ec6737"/>
+              <path id="Path_354" data-name="Path 354" d="M466.208,623.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-380.066 -511.339)" fill="#ec6737"/>
+              <path id="Path_355" data-name="Path 355" d="M386.208,543.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-314.43 -445.703)" fill="#ec6737"/>
+              <path id="Path_356" data-name="Path 356" d="M306.208,623.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-248.793 -511.339)" fill="#ec6737"/>
+              <path id="Path_357" data-name="Path 357" d="M226.208,383.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-183.156 -314.43)" fill="#ec6737"/>
+              <path id="Path_358" data-name="Path 358" d="M146.208,463.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-117.52 -380.066)" fill="#ec6737"/>
+              <path id="Path_359" data-name="Path 359" d="M66.208,383.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-51.883 -314.43)" fill="#ec6737"/>
+              <path id="Path_360" data-name="Path 360" d="M0,463.19v6.036a3.018,3.018,0,0,0,3.018-3.018A3.018,3.018,0,0,0,0,463.19" transform="translate(-0.039 -380.066)" fill="#ec6737"/>
+              <path id="Path_361" data-name="Path 361" d="M226.208,543.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-183.156 -445.703)" fill="#ec6737"/>
+              <path id="Path_362" data-name="Path 362" d="M146.208,623.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-117.52 -511.339)" fill="#ec6737"/>
+              <path id="Path_363" data-name="Path 363" d="M66.208,543.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-51.883 -445.703)" fill="#ec6737"/>
+              <path id="Path_364" data-name="Path 364" d="M0,623.19v6.036a3.018,3.018,0,0,0,3.018-3.018A3.018,3.018,0,0,0,0,623.19" transform="translate(-0.039 -511.339)" fill="#ec6737"/>
+              <path id="Path_365" data-name="Path 365" d="M1186.208,703.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-970.795 -576.976)" fill="#ec6737"/>
+              <path id="Path_366" data-name="Path 366" d="M1263.19,786.208a3.018,3.018,0,0,0,3.018,3.018V783.19a3.018,3.018,0,0,0-3.018,3.018" transform="translate(-1036.432 -642.613)" fill="#ec6737"/>
+              <path id="Path_367" data-name="Path 367" d="M1106.208,783.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-905.159 -642.613)" fill="#ec6737"/>
+              <path id="Path_368" data-name="Path 368" d="M1026.208,703.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-839.522 -576.976)" fill="#ec6737"/>
+              <path id="Path_369" data-name="Path 369" d="M946.208,783.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-773.886 -642.613)" fill="#ec6737"/>
+              <path id="Path_370" data-name="Path 370" d="M1186.208,863.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-970.795 -708.249)" fill="#ec6737"/>
+              <path id="Path_371" data-name="Path 371" d="M1263.19,946.208a3.018,3.018,0,0,0,3.018,3.018V943.19a3.018,3.018,0,0,0-3.018,3.018" transform="translate(-1036.432 -773.886)" fill="#ec6737"/>
+              <path id="Path_372" data-name="Path 372" d="M1106.208,943.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-905.159 -773.886)" fill="#ec6737"/>
+              <path id="Path_373" data-name="Path 373" d="M1026.208,863.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-839.522 -708.249)" fill="#ec6737"/>
+              <path id="Path_374" data-name="Path 374" d="M946.208,943.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-773.886 -773.886)" fill="#ec6737"/>
+              <path id="Path_375" data-name="Path 375" d="M866.208,703.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-708.249 -576.976)" fill="#ec6737"/>
+              <path id="Path_376" data-name="Path 376" d="M786.208,783.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-642.613 -642.613)" fill="#ec6737"/>
+              <path id="Path_377" data-name="Path 377" d="M706.208,703.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-576.976 -576.976)" fill="#ec6737"/>
+              <path id="Path_378" data-name="Path 378" d="M626.208,783.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-511.339 -642.613)" fill="#ec6737"/>
+              <path id="Path_379" data-name="Path 379" d="M866.208,863.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-708.249 -708.249)" fill="#ec6737"/>
+              <path id="Path_380" data-name="Path 380" d="M786.208,943.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-642.613 -773.886)" fill="#ec6737"/>
+              <path id="Path_381" data-name="Path 381" d="M706.208,863.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-576.976 -708.249)" fill="#ec6737"/>
+              <path id="Path_382" data-name="Path 382" d="M626.208,943.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-511.339 -773.886)" fill="#ec6737"/>
+              <path id="Path_383" data-name="Path 383" d="M1186.208,1023.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-970.795 -839.522)" fill="#ec6737"/>
+              <path id="Path_384" data-name="Path 384" d="M1263.19,1106.208a3.018,3.018,0,0,0,3.018,3.018v-6.036a3.018,3.018,0,0,0-3.018,3.018" transform="translate(-1036.432 -905.159)" fill="#ec6737"/>
+              <path id="Path_385" data-name="Path 385" d="M1106.208,1103.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-905.159 -905.159)" fill="#ec6737"/>
+              <path id="Path_386" data-name="Path 386" d="M1026.208,1023.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-839.522 -839.522)" fill="#ec6737"/>
+              <path id="Path_387" data-name="Path 387" d="M946.208,1103.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-773.886 -905.159)" fill="#ec6737"/>
+              <path id="Path_388" data-name="Path 388" d="M1186.208,1183.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-970.795 -970.795)" fill="#ec6737"/>
+              <path id="Path_389" data-name="Path 389" d="M1263.19,1266.208h3.018v-3.018a3.018,3.018,0,0,0-3.018,3.018" transform="translate(-1036.432 -1036.432)" fill="#ec6737"/>
+              <path id="Path_390" data-name="Path 390" d="M1106.208,1263.19a3.018,3.018,0,0,0-3.018,3.018h6.036a3.018,3.018,0,0,0-3.018-3.018" transform="translate(-905.159 -1036.432)" fill="#ec6737"/>
+              <path id="Path_391" data-name="Path 391" d="M1026.208,1183.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-839.522 -970.795)" fill="#ec6737"/>
+              <path id="Path_392" data-name="Path 392" d="M946.208,1263.19a3.018,3.018,0,0,0-3.018,3.018h6.036a3.018,3.018,0,0,0-3.018-3.018" transform="translate(-773.886 -1036.432)" fill="#ec6737"/>
+              <path id="Path_393" data-name="Path 393" d="M866.208,1023.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-708.249 -839.522)" fill="#ec6737"/>
+              <path id="Path_394" data-name="Path 394" d="M786.208,1103.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-642.613 -905.159)" fill="#ec6737"/>
+              <path id="Path_395" data-name="Path 395" d="M706.208,1023.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-576.976 -839.522)" fill="#ec6737"/>
+              <path id="Path_396" data-name="Path 396" d="M626.208,1103.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-511.339 -905.159)" fill="#ec6737"/>
+              <path id="Path_397" data-name="Path 397" d="M866.208,1183.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-708.249 -970.795)" fill="#ec6737"/>
+              <path id="Path_398" data-name="Path 398" d="M786.208,1263.19a3.018,3.018,0,0,0-3.018,3.018h6.036a3.018,3.018,0,0,0-3.018-3.018" transform="translate(-642.613 -1036.432)" fill="#ec6737"/>
+              <path id="Path_399" data-name="Path 399" d="M706.208,1183.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-576.976 -970.795)" fill="#ec6737"/>
+              <path id="Path_400" data-name="Path 400" d="M626.208,1263.19a3.018,3.018,0,0,0-3.018,3.018h6.036a3.018,3.018,0,0,0-3.018-3.018" transform="translate(-511.339 -1036.432)" fill="#ec6737"/>
+              <path id="Path_401" data-name="Path 401" d="M546.208,703.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-445.703 -576.976)" fill="#ec6737"/>
+              <path id="Path_402" data-name="Path 402" d="M466.208,783.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-380.066 -642.613)" fill="#ec6737"/>
+              <path id="Path_403" data-name="Path 403" d="M386.208,703.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-314.43 -576.976)" fill="#ec6737"/>
+              <path id="Path_404" data-name="Path 404" d="M306.208,783.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-248.793 -642.613)" fill="#ec6737"/>
+              <path id="Path_405" data-name="Path 405" d="M546.208,863.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-445.703 -708.249)" fill="#ec6737"/>
+              <path id="Path_406" data-name="Path 406" d="M466.208,943.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-380.066 -773.886)" fill="#ec6737"/>
+              <path id="Path_407" data-name="Path 407" d="M386.208,863.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-314.43 -708.249)" fill="#ec6737"/>
+              <path id="Path_408" data-name="Path 408" d="M306.208,943.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-248.793 -773.886)" fill="#ec6737"/>
+              <path id="Path_409" data-name="Path 409" d="M226.208,703.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-183.156 -576.976)" fill="#ec6737"/>
+              <path id="Path_410" data-name="Path 410" d="M146.208,783.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-117.52 -642.613)" fill="#ec6737"/>
+              <path id="Path_411" data-name="Path 411" d="M66.208,703.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-51.883 -576.976)" fill="#ec6737"/>
+              <path id="Path_412" data-name="Path 412" d="M0,783.19v6.036a3.018,3.018,0,0,0,3.018-3.018A3.018,3.018,0,0,0,0,783.19" transform="translate(-0.039 -642.613)" fill="#ec6737"/>
+              <path id="Path_413" data-name="Path 413" d="M226.208,863.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-183.156 -708.249)" fill="#ec6737"/>
+              <path id="Path_414" data-name="Path 414" d="M146.208,943.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-117.52 -773.886)" fill="#ec6737"/>
+              <path id="Path_415" data-name="Path 415" d="M66.208,863.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-51.883 -708.249)" fill="#ec6737"/>
+              <path id="Path_416" data-name="Path 416" d="M0,943.19v6.036a3.018,3.018,0,0,0,3.018-3.018A3.018,3.018,0,0,0,0,943.19" transform="translate(-0.039 -773.886)" fill="#ec6737"/>
+              <path id="Path_417" data-name="Path 417" d="M546.208,1023.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-445.703 -839.522)" fill="#ec6737"/>
+              <path id="Path_418" data-name="Path 418" d="M466.208,1103.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-380.066 -905.159)" fill="#ec6737"/>
+              <path id="Path_419" data-name="Path 419" d="M386.208,1023.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-314.43 -839.522)" fill="#ec6737"/>
+              <path id="Path_420" data-name="Path 420" d="M306.208,1103.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-248.793 -905.159)" fill="#ec6737"/>
+              <path id="Path_421" data-name="Path 421" d="M546.208,1183.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-445.703 -970.795)" fill="#ec6737"/>
+              <path id="Path_422" data-name="Path 422" d="M466.208,1263.19a3.018,3.018,0,0,0-3.018,3.018h6.036a3.018,3.018,0,0,0-3.018-3.018" transform="translate(-380.066 -1036.432)" fill="#ec6737"/>
+              <path id="Path_423" data-name="Path 423" d="M386.208,1183.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-314.43 -970.795)" fill="#ec6737"/>
+              <path id="Path_424" data-name="Path 424" d="M306.208,1263.19a3.018,3.018,0,0,0-3.018,3.018h6.036a3.018,3.018,0,0,0-3.018-3.018" transform="translate(-248.793 -1036.432)" fill="#ec6737"/>
+              <path id="Path_425" data-name="Path 425" d="M226.208,1023.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-183.156 -839.522)" fill="#ec6737"/>
+              <path id="Path_426" data-name="Path 426" d="M146.208,1103.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-117.52 -905.159)" fill="#ec6737"/>
+              <path id="Path_427" data-name="Path 427" d="M66.208,1023.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-51.883 -839.522)" fill="#ec6737"/>
+              <path id="Path_428" data-name="Path 428" d="M0,1103.19v6.036a3.018,3.018,0,0,0,3.018-3.018A3.018,3.018,0,0,0,0,1103.19" transform="translate(-0.039 -905.159)" fill="#ec6737"/>
+              <path id="Path_429" data-name="Path 429" d="M226.208,1183.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-183.156 -970.795)" fill="#ec6737"/>
+              <path id="Path_430" data-name="Path 430" d="M146.208,1263.19a3.018,3.018,0,0,0-3.018,3.018h6.036a3.018,3.018,0,0,0-3.018-3.018" transform="translate(-117.52 -1036.432)" fill="#ec6737"/>
+              <path id="Path_431" data-name="Path 431" d="M66.208,1183.19a3.018,3.018,0,1,0,3.018,3.018,3.018,3.018,0,0,0-3.018-3.018" transform="translate(-51.883 -970.795)" fill="#ec6737"/>
+              <path id="Path_432" data-name="Path 432" d="M0,1263.19v3.018H3.018A3.018,3.018,0,0,0,0,1263.19" transform="translate(-0.039 -1036.432)" fill="#ec6737"/>
+            </g>
+          </svg>          
+        </div>
+        <img src="./magento/custom-magento.png" class="z-10 relative lg:pl-5 2xl:pl-10" />
+      </div>
+      <div class="md:w-1/2 pt-5 xl:pt-10 2xl:pt-20 ">
+          <h2 class="font-bold text-2xl lg:text-3xl xl:text-4xl">
+            Get Custom Magento Web Development Solutions from Value Coders
+          </h2>
+          <div class="flex flex-col gap-5 xl:gap-10 py-6 md:py-2 lg:py-6 md:text-xs lg:text-base">
+            <p>
+              If you need a custom Magento web development solution, then ValueCoders can help. We have a team of experienced Magento developers who can build a bespoke eCommerce platform for your business.
+            </p>
+            <p>
+              We offer a range of services, including Magento design and development, theme customization, plugin development, and extension installation. We also offer Magento support and maintenance services.
+            </p>
+            <p>
+              Get in touch with us today to discuss your specific needs. We’ll be happy to provide you with a free quote.
+            </p>
+
+          </div>
+          <div class=" py-4 lg:py-8">
+              <a href="#contact" class="bg-brand text-white rounded-3xl pl-3 pr-6 text-center py-3 lg:py-4" style="cursor: pointer">
+                Get A Free <b>Consultation </b>
+              </a>
+            </div>
+      </div>
+    </section>
+
+    <!-- Free consultation  -->
+    <section class="py-5 lg:py-10 bg-brand text-white">
+      <div class="container px-3 mx-auto flex flex-col-reverse sm:flex-row sm:items-center"> 
+          <div class="md:w-3/4">
+            <h2 class="text-2xl lg:text-3xl 2xl:text-[50px] 2xl:leading-[61px] mb-2 md:mb-5 lg:w-4/5">
+              For Your Business Growth, Schedule A Call With Our Experts To Get A <br/> <b>FREE Consultation</b>
+            </h2>  
+            <div class=" py-4 sm:py-8">
+              <a href="#contact" class="bg-white text-brand rounded-3xl pl-3 pr-6 text-center py-3 lg:py-4" style="cursor: pointer">
+                Get A Free <b>Consultation </b>
+              </a>
+            </div>
+          </div>
+          <div class="md:w-1/4">
+            <img src="./magento/free-consultation.png" />
+          </div>
+      </div>
+    </section>
+
+
+    <!-- Shopify Theme -->
+    <section class=" py-10 xl:py-20">
+      <div
+        class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] flex flex-col md:flex-row justify-between "
+      >
+        <div class="md:w-2/5 2xl:max-w-[600px]">
+          <h2 class="text-2xl lg:text-3xl 2xl:text-[50px] 2xl:leading-[61px] mb-2 md:mb-5">
+            Our Shopify Theme development Process
+          </h2>
+          <div class=" pt-10">
+
+            <div class="collapser  mb-5 md:mb-10 overflow-hidden transition-all duration-500" style="height: 160px;" onclick="collapser(0)">
+              <div class="flex items-center gap-4">
+                <div class="svg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="39.466"
+                    height="39.466"
+                    viewBox="0 0 39.466 39.466"
+                    class="w-[30px] xl:w-[39px] plus"
+                  >
+                    <g
+                      id="Icon_feather-plus-circle"
+                      data-name="Icon feather-plus-circle"
+                      transform="translate(-1.5 -1.5)"
+                    >
+                      <path
+                        id="Path_249"
+                        data-name="Path 249"
+                        d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
+                        fill="none"
+                        stroke="#EC6737"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                      />
+                      <path
+                        id="Path_251"
+                        data-name="Path 251"
+                        d="M12,18H30.544"
+                        transform="translate(0.005 3.278)"
+                        fill="none"
+                        stroke="#EC6737"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <p class="text-md sm:text-lg md:text-xl 2xl:text-2xl" >
+                  Identifying Customer Requirements
+                </p>
+              </div>
+              <p class="px-5 py-2 xl:py-5 bg-[#EC673721] text-xs md:text-sm 2xl:text-base text-black mt-3">
+                The first and most important phase is gathering customer
+                requirements. Our experts might ask you a few questions to
+                identify your needs and requirements.
+              </p>
+            </div>
+            <div class="collapser mb-6 md:mb-12 overflow-hidden transition-all duration-500" onclick="collapser(1)" style="height: 50px;">
+              <div class="flex items-center gap-4">
+                <div class="svg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="39.466"
+                    height="39.466"
+                    viewBox="0 0 39.466 39.466"
+                    class="w-[30px] xl:w-[39px] minus"
+                  >
+                    <g
+                      id="Icon_feather-plus-circle"
+                      data-name="Icon feather-plus-circle"
+                      transform="translate(-1.5 -1.5)"
+                    >
+                      <path
+                        id="Path_249"
+                        data-name="Path 249"
+                        d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
+                        fill="none"
+                        stroke="#EC6737"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                      />
+                      <path
+                        id="Path_250"
+                        data-name="Path 250"
+                        d="M18,12V30.545"
+                        transform="translate(3.277 0.005)"
+                        fill="none"
+                        stroke="#EC6737"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                      />
+                      <path
+                        id="Path_251"
+                        data-name="Path 251"
+                        d="M12,18H30.544"
+                        transform="translate(0.005 3.278)"
+                        fill="none"
+                        stroke="#EC6737"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <p class="text-md sm:text-lg md:text-xl 2xl:text-2xl">
+                  Designing process
+                </p>
+              </div>
+              <p
+                class="px-5 py-2 xl:py-5 bg-[#EC673721] text-xs md:text-sm 2xl:text-base text-black mt-3 "
+                
+              >
+                The first and most important phase is gathering customer
+                requirements. Our experts might ask you a few questions to
+                identify your needs and requirements.
+              </p>
+            </div>
+            <div class="collapser mb-6 md:mb-12 overflow-hidden transition-all duration-500" onclick="collapser(2)" style="height: 50px;">
+              <div class="flex items-center gap-4">
+                <div class="svg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="39.466"
+                    height="39.466"
+                    viewBox="0 0 39.466 39.466"
+                    class="w-[30px] xl:w-[39px]"
+                  >
+                    <g
+                      id="Icon_feather-plus-circle"
+                      data-name="Icon feather-plus-circle"
+                      transform="translate(-1.5 -1.5)"
+                    >
+                      <path
+                        id="Path_249"
+                        data-name="Path 249"
+                        d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
+                        fill="none"
+                        stroke="#EC6737"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                      />
+                      <path
+                        id="Path_250"
+                        data-name="Path 250"
+                        d="M18,12V30.545"
+                        transform="translate(3.277 0.005)"
+                        fill="none"
+                        stroke="#EC6737"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                      />
+                      <path
+                        id="Path_251"
+                        data-name="Path 251"
+                        d="M12,18H30.544"
+                        transform="translate(0.005 3.278)"
+                        fill="none"
+                        stroke="#EC6737"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <p class="text-md sm:text-lg md:text-xl 2xl:text-2xl">
+                  Launch
+                </p>
+              </div>
+              <p
+                class="px-5 py-2 xl:py-5 bg-[#EC673721] text-xs md:text-sm 2xl:text-base text-black mt-3 "
+                
+              >
+                The first and most important phase is gathering customer
+                requirements. Our experts might ask you a few questions to
+                identify your needs and requirements.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2 ">
+          <img src="./magento/shopify-theme.png" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Portfolio Section -->
+    <section class="py-5 md:py-10 xl:py-20">
+      <div
+        class="container px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] flex items-center flex-col"
+      >
+        <h2 class="text-2xl md:text-4xl lg:text-[57px] md:py-3 ">
+          OUR WORK PORTFOLIO
+        </h2>
+        <div
+          class="w-full md:w-2/3 flex justify-around md:justify-between items-center lg:text-[41px] py-5 md:py-10 xl:py-20"
+        >
+          <button
+            class="p-2 border-b-2 border-brand text-brand transition duration-1000 "
+            id="all"
+            onclick="handleClick('all')"
+          >
+            All
+          </button>
+          <button class="p-2" id="mobile" onclick="handleClick('mobile')">
+            Mobile
+          </button>
+          <button class="p-2" id="website" onclick="handleClick('website')">
+            Website
+          </button>
+        </div>
+        <div
+          class="grid md:grid-cols-2 py-5 w-full gap-x-16 gap-y-20"
+          id="work-portfolio"
+        >
+        </div>
+        <div class="py-5 md:py-20">
+          <button
+            class="pl-3 pr-6 md:pl-5 md:pr-10 lg:pl-10  lg:pr-20 bg-brand text-white py-2 sm:py-4 lg:py-6   rounded-full text-lg lg:text-[32px]"
+            onclick="handleExplore('more')"
+            id="explore-more"
+          >
+            Explore More
+          </button>
+          <button
+            class="pl-3 pr-6 md:pl-5 md:pr-10  md:pl-10  md:pr-20 bg-brand text-white py-2 sm:py-4 lg:py-6 rounded-full text-lg lg:text-[32px]"
+            onclick="handleExplore('less')"
+            id="explore-less"
+            style="display: none;"
+          >
+            Explore Less
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact us section -->
+    <div id="contact"></div>
+    <section class="bg-[#F6F6F6]">
+      <div
+        class="container py-10 px-3 mx-auto md:max-w-[90%] lg:max-w-[80%] lg:flex justify-between"
+      >
+        <div class="lg:w-1/2">
+          <p class="text-grey mb-3 font-medium">Let's Talk</p>
+          <h2 class="text-3xl lg:text-[50px] font-bold mb-5 md:mb-20">
+            Contact Us
+          </h2>
+          <form class="text-sm sm:text-base">
+            <div class="flex flex-col gap-3 md:gap-0 md:flex-row py-5">
+              <span class="md:w-1/2 pr-2">
+                <!-- <p class="font-bold">Full Name</p> -->
+                <input
+                  placeholder="Full Name"
+                  class="px-4 py-3 border my-1 w-full bg-[#f6f6f6] " style="border-top: none; border-left: none; border-right: none;"
+                />
+              </span>
+              <span class="md:w-1/2">
+                <!-- <p class="font-bold">Email</p> -->
+                <input
+                  placeholder="Email"
+                  class="px-4 py-3 border my-1 w-full bg-[#f6f6f6] " style="border-top: none; border-left: none; border-right: none;"
+                />
+              </span>
+            </div>
+            <div class="w-full my-4 md:my-10">
+              <!-- <p class="font-bold">Message</p> -->
+              <textarea
+                placeholder="Message"
+                rows="1"
+                cols="50"
+                class="px-2 md:px-4 py-3 border my-1 w-full bg-[#f6f6f6] " style="border-top: none; border-left: none; border-right: none;"
+              ></textarea>
+            </div>
+            <div class="flex flex-col-reverse md:flex-row justify-between md:pr-4 pb-3 md:pb-0">
+              <div class="">
+                <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+              </div>
+              <div class="my-3 md:my-0">
+                <input type="file" class="hidden" id="file-input" />
+                <div class="flex gap-4 w-max whitespace-nowrap" style="cursor: pointer;" onclick="handleFileClick()" >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 rotate-45 " ><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M396.2 83.8c-24.4-24.4-64-24.4-88.4 0l-184 184c-42.1 42.1-42.1 110.3 0 152.4s110.3 42.1 152.4 0l152-152c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-152 152c-64 64-167.6 64-231.6 0s-64-167.6 0-231.6l184-184c46.3-46.3 121.3-46.3 167.6 0s46.3 121.3 0 167.6l-176 176c-28.6 28.6-75 28.6-103.6 0s-28.6-75 0-103.6l144-144c10.9-10.9 28.7-10.9 39.6 0s10.9 28.7 0 39.6l-144 144c-6.7 6.7-6.7 17.7 0 24.4s17.7 6.7 24.4 0l176-176c24.4-24.4 24.4-64 0-88.4z"/></svg>
+                  Add file
+                </div>
+                <p id="file-name whitespace-nowrap">No file chosen</p>
+              </div>
+            </div>
+            <input
+              type="submit"
+              value="Send"
+              class="text-white bg-brand pl-3 pr-6 md:pl-5 md:pr-10 text-center py-2 my-5 md:my-10 rounded-md "
+            />
+
+          </form>
+        </div>
+        <div class="mt-16 md:mt-0 lg:w-1/5">
+          <p class="text-grey pb-5 text-md font-medium">Follow</p>
+          <div class="flex gap-8 mb-8 text-xl">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-behance"></i>
+          </div>
+          <p class="text-grey mt-10 md:mt-20 text-md font-medium">Write</p>
+          <div class="my-3 font-bold text-2xl">
+            <h4>info@digitalwaze.com</h4>
+            <h4>(123) 345 356 4545</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script>
+      function workPortfolioLoader(arr,explore) {
+        try{
+          gsap.to("#work-portfolio",{duration:0.1,opacity:0});
+          const workPortfolioElement = document.getElementById("work-portfolio");
+          workPortfolioElement.style.opacity = 0;
+          let workPortfolioInitialElement = "";
+          const newArr = explore ? arr : [...arr].splice(0,4);
+          newArr.map((item) => {
+            const portfolioCard = `
+            <div class="max-w-[700px] text-xl md:text-3xl xl:text-4xl xl:leading-[50px] ">
+                  <img src="${item.image}" />
+                  <p class="pb-3 pt-8 m-0">
+                    ${item.title}
+                  </p>
+                  <a href="${item.href}" class="text-brand border-b border-black pr-2 text-lg md:text-2xl xl:text-3xl">
+                    Case Study
+                  </a>
+                </div>
+                `;
+            workPortfolioInitialElement += portfolioCard;
+          });
+          workPortfolioElement.innerHTML = workPortfolioInitialElement;
+          if(arr.length > 4){
+            document.getElementById("explore-more").style.display = "block";
+          } else {
+            document.getElementById("explore-more").style.display = "none";
+          }
+          workPortfolioElement.style.opacity = 1;
+          gsap.to("#work-portfolio",{duration:1,delay:0.5,ease:"expo.inOut",opacity:1});
+        } catch (err){
+          console.log("err",err)
+        }
+      }
+      //This click function is handling mobile website
+      function handleClick(value) {
+        const arr = ["all", "mobile", "website"];
+        arr.map((item) => {
+          if (item !== value) {
+            const elementId = document.getElementById(item);
+            elementId.className = "p-2";
+            elementId.style.color = "black";
+            elementId.style.borderBottom = "none";
+            // gsap.to(`#${item}`,{duration:1,color:"#EC6737",borderBottom:"1px solid #EC6737"})
+          } else {
+            const elementIdActive = document.getElementById(value);
+            elementIdActive.className =
+            "p-2 border-b-2 border-brand";
+            gsap.to(`#${item}`,{duration:1,color:"#EC6737",borderBottom:"1px solid #EC6737"})
+            tab = value;
+          }
+          
+        });
+        if(value === "all"){
+          workPortfolioLoader([...workPortfolioData.website,...workPortfolioData.mobile],false);
+        }else{
+          workPortfolioLoader([...workPortfolioData[value]],false);
+        }
+      }
+      function handleExplore(type){
+        if(type === "more"){
+          if(tab === "all"){
+            workPortfolioLoader([...workPortfolioData.website,...workPortfolioData.mobile],true);
+          } else {
+            workPortfolioLoader([...workPortfolioData[tab]],true);
+          }
+          document.getElementById("explore-more").style.display = "none";
+          document.getElementById("explore-less").style.display = "block";
+        } else {
+          if(tab === "all"){
+            workPortfolioLoader([...workPortfolioData.website,...workPortfolioData.mobile],false);
+          } else {
+            workPortfolioLoader([...workPortfolioData[tab]],false);
+          }
+          document.getElementById("explore-less").style.display = "none";
+          document.getElementById("explore-more").style.display = "block";
+        }
+      }
+      
+      function collapser(index) {
+        const minus = `<svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="39.466"
+                  height="39.466"
+                  viewBox="0 0 39.466 39.466"
+                  class="w-[30px] xl:w-[39px] plus"
+                >
+                  <g
+                    id="Icon_feather-plus-circle"
+                    data-name="Icon feather-plus-circle"
+                    transform="translate(-1.5 -1.5)"
+                  >
+                    <path
+                      id="Path_249"
+                      data-name="Path 249"
+                      d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
+                      fill="none"
+                      stroke="#EC6737"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                    />
+                    <path
+                      id="Path_251"
+                      data-name="Path 251"
+                      d="M12,18H30.544"
+                      transform="translate(0.005 3.278)"
+                      fill="none"
+                      stroke="#EC6737"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                    />
+                  </g>
+                </svg>`;
+        const plusIcon = `<svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="39.466"
+                height="39.466"
+                viewBox="0 0 39.466 39.466"
+                class="w-[30px] xl:w-[39px]"
+              >
+                <g
+                  id="Icon_feather-plus-circle"
+                  data-name="Icon feather-plus-circle"
+                  transform="translate(-1.5 -1.5)"
+                >
+                  <path
+                    id="Path_249"
+                    data-name="Path 249"
+                    d="M39.466,21.233A18.233,18.233,0,1,1,21.233,3,18.233,18.233,0,0,1,39.466,21.233Z"
+                    fill="none"
+                    stroke="#EC6737"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                  />
+                  <path
+                    id="Path_250"
+                    data-name="Path 250"
+                    d="M18,12V30.545"
+                    transform="translate(3.277 0.005)"
+                    fill="none"
+                    stroke="#EC6737"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                  />
+                  <path
+                    id="Path_251"
+                    data-name="Path 251"
+                    d="M12,18H30.544"
+                    transform="translate(0.005 3.278)"
+                    fill="none"
+                    stroke="#EC6737"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                  />
+                </g>
+              </svg>`;
+        const collaperDivs = document.getElementsByClassName("collapser");
+        //taking style from particular div
+        let firstChildDisplayStyle = collaperDivs[index].style;
+        console.log(firstChildDisplayStyle)
+        if(firstChildDisplayStyle.height === "50px"){
+          //revealing here
+          firstChildDisplayStyle.height = "160px";
+          
+            
+          //changing icon from below code to minus
+          collaperDivs[index].childNodes[1].childNodes[1].innerHTML = minus;
+        } else {
+          //collapsing here
+        firstChildDisplayStyle.height = "50px"
+        //   //Changing icon from below code to plus
+          collaperDivs[index].childNodes[1].childNodes[1].innerHTML = plusIcon; 
+        }
+      }
+      
+      function handleFileClick() {
+        // const fileNameElement = document.getElementById("file-name");
+        const fileInput = document.getElementById("file-input");
+        fileInput.click();
+      }
+      
+      function handleFileChange(e) {
+        const {files} = e.target;
+        const fileNameElement = document.getElementById("file-name");
+        fileNameElement.innerText = files.length > 0 ? e.target.files[0].name : "No file Chosen"
+        
+      }
+
+      window.onload=()=>{
+        workPortfolioLoader([...workPortfolioData.website,...workPortfolioData.mobile],false);
+        document.getElementById("file-input").addEventListener("change",(e)=>{handleFileChange(e)});
+      };
+      
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </body>
+</html>
